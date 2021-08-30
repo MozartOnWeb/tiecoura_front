@@ -6,6 +6,9 @@ import { fs } from "../firebase/config";
 // Import Modal
 import Modal3 from "../Components/Modal3";
 
+// Import Hook
+import { useWindowSize } from "../hooks/useWindow";
+
 import {
   ExperienceBox,
   ExperienceBoxes,
@@ -83,19 +86,31 @@ const Experience = ({ selected, setSelected }) => {
       setSerieName(tempNames);
     });
 
+  // Use Window size
+  const size = useWindowSize();
+
   return (
     <div>
       {/* Experience Container */}
       <ExperienceWrapper>
         {/* Experience Big-Image */}
         <ExperienceImage>
-          <video
-            onClick={() => setSelected(secondVid)}
-            src={secondVid}
-            loop
-            autoPlay
-            muted
-          />
+          {size.width <= "375" ? (
+            <video
+              onClick={() => setSelected(secondVid)}
+              src={secondVid}
+              loop
+              muted
+            />
+          ) : (
+            <video
+              onClick={() => setSelected(secondVid)}
+              src={secondVid}
+              loop
+              autoPlay
+              muted
+            />
+          )}
         </ExperienceImage>
         {/* Experience Big-Image */}
 
@@ -113,15 +128,18 @@ const Experience = ({ selected, setSelected }) => {
                 xmlns="http://www.w3.org/2000/svg"
                 width="791.246"
                 height="524.948"
-                viewBox="0 0 791.246 524.948">
+                viewBox="0 0 791.246 524.948"
+              >
                 <g
                   id="Groupe_5"
                   data-name="Groupe 5"
-                  transform="translate(-190 -344.052)">
+                  transform="translate(-190 -344.052)"
+                >
                   <g
                     id="Groupe_1"
                     data-name="Groupe 1"
-                    transform="translate(80 345)">
+                    transform="translate(80 345)"
+                  >
                     <line
                       id="Ligne_2"
                       data-name="Ligne 2"
@@ -144,7 +162,8 @@ const Experience = ({ selected, setSelected }) => {
                   <g
                     id="Groupe_3"
                     data-name="Groupe 3"
-                    transform="translate(80 869) rotate(-90)">
+                    transform="translate(80 869) rotate(-90)"
+                  >
                     <line
                       id="Ligne_2-2"
                       data-name="Ligne 2"
@@ -167,7 +186,8 @@ const Experience = ({ selected, setSelected }) => {
                   <g
                     id="Groupe_4"
                     data-name="Groupe 4"
-                    transform="translate(1080 867.344) rotate(180)">
+                    transform="translate(1080 867.344) rotate(180)"
+                  >
                     <line
                       id="Ligne_2-3"
                       data-name="Ligne 2"
@@ -190,7 +210,8 @@ const Experience = ({ selected, setSelected }) => {
                   <g
                     id="Groupe_2"
                     data-name="Groupe 2"
-                    transform="translate(1080 345) rotate(90)">
+                    transform="translate(1080 345) rotate(90)"
+                  >
                     <line
                       id="Ligne_2-4"
                       data-name="Ligne 2"
@@ -234,7 +255,8 @@ const Experience = ({ selected, setSelected }) => {
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
                 height="35.91"
-                viewBox="0 0 35 35.91">
+                viewBox="0 0 35 35.91"
+              >
                 <path
                   id="FontAwsome_arrow-down_"
                   data-name="FontAwsome (arrow-down)"
@@ -254,7 +276,8 @@ const Experience = ({ selected, setSelected }) => {
             xmlns="http://www.w3.org/2000/svg"
             width="35"
             height="35.91"
-            viewBox="0 0 35 35.91">
+            viewBox="0 0 35 35.91"
+          >
             <path
               id="FontAwsome_arrow-down_"
               data-name="FontAwsome (arrow-down)"

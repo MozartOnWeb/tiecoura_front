@@ -15,6 +15,8 @@ export const MenuContainer = styled(motion.div)`
   ${down("md")} {
     padding: 50px 0px;
     width: 100%;
+    height: 100vh;
+    overflow: hidden;
   }
   .menu-close {
     position: absolute;
@@ -74,6 +76,11 @@ export const MenuWrapper = styled.div`
     align-items: center;
     flex-direction: column;
   }
+  ${down("xs")} {
+    margin: 70px auto;
+    height: 63%;
+    justify-content: space-between;
+  }
   ${down("s")} {
     margin: 90px auto;
     height: 50%;
@@ -97,11 +104,20 @@ export const MenuLinks = styled.div`
     width: 100%;
     margin: 50px auto;
   }
+  ${down("xs")} {
+    height: 170px;
+    width: 100%;
+    margin: 0px auto;
+  }
 
   a {
     ${down("sm")} {
       font-size: 18px;
       margin-top: 40px;
+    }
+    ${down("sm")} {
+      font-size: 18px;
+      margin-top: 20px;
     }
     ${down("s")} {
       font-size: 16px;
@@ -145,16 +161,18 @@ export const MenuImage = styled.div`
 export const MenuSocials = styled.div`
   position: absolute;
   bottom: 140px;
-  left: 100px;
-  width: 230px;
+  left: 130px;
+  width: 285px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   ${down("sm")} {
     left: 60px;
   }
-  ${down("s")} {
-    left: 35px;
+  ${down("xs")} {
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
   }
   a {
     &:hover {
@@ -184,7 +202,7 @@ export const MenuDesc = styled.div`
     line-height: 22px;
     word-break: break-all;
     ${down("sm")} {
-      width: 90%;
+      width: 100%;
     }
   }
 `;

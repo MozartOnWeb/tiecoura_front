@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { down, only } from "styled-breakpoints";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 export const ExperienceWrapper = styled(motion.div)`
   width: 80%;
@@ -40,6 +40,9 @@ export const ExperienceImage = styled(motion.div)`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    ${down("xs")} {
+      display: none;
+    }
   }
 `;
 
@@ -97,7 +100,6 @@ export const ExperienceInfo = styled(motion.div)`
   }
   .experienceDesc {
     hyphens: auto;
-
   }
 `;
 

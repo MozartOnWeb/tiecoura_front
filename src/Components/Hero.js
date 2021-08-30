@@ -9,6 +9,9 @@ import Modal2 from "../Components/Modal2";
 // Import firestore
 import { fs } from "../firebase/config";
 
+// Import Hook
+import { useWindowSize } from "../hooks/useWindow";
+
 // Import Styled Components
 import {
   BackgroundImage,
@@ -114,6 +117,9 @@ const Hero = () => {
       },
     ],
   };
+
+  // Use Window size
+  const size = useWindowSize();
 
   return (
     <HeroContainer>
@@ -267,7 +273,11 @@ const Hero = () => {
             <div className="squared2">
               <Link to="/video">
                 <h2>Voir les Vidéos</h2>
-                <video src={firstVid} loop autoPlay muted />
+                {size.width <= "375" ? (
+                  <video src={firstVid} loop muted />
+                ) : (
+                  <video src={firstVid} loop muted autoPlay />
+                )}
               </Link>
             </div>
 

@@ -27,6 +27,9 @@ export const Arrow = styled(motion.div)`
       left: 50%;
       bottom: 0%;
       transform: translate(-50%, -50%);
+      svg path {
+        fill: ${(props) => props.theme.red};
+      }
     `}
 
   ${(props) =>

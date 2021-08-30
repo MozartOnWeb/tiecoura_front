@@ -38,7 +38,10 @@ export const HeroWrapper = styled.div`
   ${down("xs")} {
     flex-direction: column;
     top: 50%;
-    height: 75vh;
+    height: 65vh;
+  }
+  ${down("s")} {
+    height: 68vh;
   }
   /* Enter Button Styles */
   a {
@@ -115,6 +118,12 @@ export const HeroImages = styled.div`
       left: 50%;
       transform: translate(-50%, -50%);
       opacity: 0;
+        ${down("xs")} {
+          font-size: 25px;
+          left: 40%;
+          top: 45%;
+          line-height: 35px;
+      }
     }
     a {
       text-decoration: none;
@@ -125,11 +134,11 @@ export const HeroImages = styled.div`
       }
       ${down("xs")} {
         width: 100%;
-        height: 250px;
+        height: 180px;
       }
       ${down("s")} {
         width: 100%;
-        height: 210px;
+        height: 180px;
       }
       img,
       video {
@@ -183,7 +192,7 @@ export const HeroImages = styled.div`
     a {
       text-decoration: none;
     }
-    ${only("md")} {
+    ${down("md")} {
       width: 220px;
       height: 190px;
     }
@@ -191,9 +200,6 @@ export const HeroImages = styled.div`
       width: 100%;
       height: 250px;
       display: none;
-      img, video {
-        display: none;
-      }
     }
     img,
     video {
@@ -201,6 +207,9 @@ export const HeroImages = styled.div`
       width: 100%;
       height: 100%;
       object-fit: cover;
+      ${down("xs")} {
+        display: none;
+      }
     }
   }
   .rectangle {
