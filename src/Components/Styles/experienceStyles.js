@@ -178,7 +178,7 @@ export const ExperienceBox = styled(motion.div)`
     padding: 15px;
   }
   .headline {
-    color: ${(props) => props.theme.red};
+    color: ${(props) => props.theme.black};
     font-family: ${(props) => props.theme.mainFont};
     font-weight: 700;
     font-size: 18px;

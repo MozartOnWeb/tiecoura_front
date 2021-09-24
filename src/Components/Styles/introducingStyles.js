@@ -1,11 +1,9 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 import { only, down } from "styled-breakpoints";
-
-
 
 export const IntroduceWrapper = styled.div`
   width: 80%;
-  padding: 50px 10px;
+  padding: 20px 10px;
   margin: 0 auto;
   position: relative;
   background-color: ${(props) => props.theme.black};
@@ -17,6 +15,7 @@ export const IntroduceWrapper = styled.div`
   border-radius: 15px;
   margin-bottom: 50px;
   margin-top: 70px;
+  box-sizing: border-box;
   ${down("md")} {
     width: 100%;
     border-radius: 0px;
@@ -28,7 +27,6 @@ export const IntroduceWrapper = styled.div`
   p {
     font-family: ${(props) => props.theme.mainFont};
     text-align: center;
-    margin-bottom: 30px;
     width: 500px;
     font-size: 14px;
     line-height: 25px;
@@ -44,6 +42,7 @@ export const IntroduceWrapper = styled.div`
 
   svg {
     width: 22px;
+    margin-top: 20px;
   }
 `;
 
@@ -51,7 +50,6 @@ export const IntroduceImage = styled.div`
   width: 800px;
   height: 350px;
   cursor: pointer;
-  margin-bottom: 35px;
   ${only("md")} {
     width: 600px;
   }

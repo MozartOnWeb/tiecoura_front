@@ -24,13 +24,6 @@ export const WelcomeWrapper = styled.div`
     svg {
       width: 25px;
       margin-top: 17px;
-      &:hover {
-        path {
-          fill: none;
-          stroke: ${(props) => props.theme.red};
-          stroke-width: 2px;
-        }
-      }
     }
     ${down("sm")} {
       left: 25%;
@@ -64,7 +57,7 @@ export const WelcomeImage = styled.div`
   position: absolute;
   right: 0;
   /* Border */
-  border-top: 3px solid #ca1c1e;
+  border-top: 3px solid #fffdff;
   display: inline-block;
   margin: 0px auto;
   padding: 0px;
@@ -86,7 +79,7 @@ export const Logo = styled(motion.h2)`
   font-size: 30px;
   font-weight: 400;
   text-transform: uppercase;
-  color: ${(props) => props.theme.red};
+  color: ${(props) => props.theme.white};
   ${down("sm")} {
     font-size: 24px;
     left: 10%;

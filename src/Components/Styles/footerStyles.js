@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { only, down } from "styled-breakpoints";
 
-
 export const FooterWrapper = styled.div`
   width: 100vw;
   padding: 30px;
@@ -86,7 +85,7 @@ export const FooterInfos = styled.div`
     position: absolute;
     margin-top: 10px;
     ${down("md")} {
-    margin-top: 0px;
+      margin-top: 0px;
       font-size: 8px;
     }
     ${down("xs")} {
@@ -147,9 +146,9 @@ export const SvgContainer = styled.div`
       width: 20px;
     }
     path {
-      fill: ${(props) => props.theme.red};
+      fill: ${(props) => props.theme.white};
       &:hover {
-        fill: ${(props) => props.theme.white};
+        opacity: 0.5;
         transition: 0.5s ease-in;
       }
     }
@@ -175,7 +174,7 @@ export const FooterForm = styled.div`
       font-size: 14px;
       padding: 10px 10px;
       border: none;
-      border-bottom: 1px solid ${(props) => props.theme.red};
+      border-bottom: 1px solid ${(props) => props.theme.white};
       background: rgba(255, 255, 255, 0.03);
       width: 100%;
       position: relative;

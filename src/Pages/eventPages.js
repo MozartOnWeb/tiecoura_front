@@ -6,6 +6,9 @@ import { NavLink, useRouteMatch } from "react-router-dom";
 // Import firestore
 import { fs } from "../firebase/config";
 
+// Import Framer Motion
+import { motion } from "framer-motion";
+
 // Import Styles
 import {
   EventsWrapper,
@@ -25,6 +28,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+// Import Modal
+import Modal2 from "../Components/Modal2";
+
 const EventPages = () => {
   const [eventNames, setEventNames] = useState([]);
   const [image, setImage] = useState("");
@@ -32,6 +38,7 @@ const EventPages = () => {
   const [date, setDate] = useState("");
   const [hour, setHour] = useState("");
   const [desc, setDesc] = useState("");
+  const [selected, setSelected] = useState(null);
 
   const match = useRouteMatch("/events/:event");
   const { event } = match.params;
@@ -127,28 +134,55 @@ const EventPages = () => {
       </EventNames>
       <EventsWrapper>
         <EventContainer>
-          <EventImage>
-            <img src={image} alt="img" />
+          <EventImage onClick={() => setSelected(image)}>
+            <motion.img
+              src={image}
+              alt="img"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5 }}
+            />
           </EventImage>
 
           <EventInfos>
-            <p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5 }}
+            >
               <span>Lieu</span> : {location}
-            </p>
-            <p>
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5 }}
+            >
               <span>Date</span> : {date}
-            </p>
-            <p>
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5 }}
+            >
               <span>Heures</span> : {hour}
-            </p>
+            </motion.p>
           </EventInfos>
 
-          <EventDesc>
-            <hr />
+          <EventDesc
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5 }}
+          >
+            <motion.hr
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5 }}
+            />
             {desc}
           </EventDesc>
         </EventContainer>
       </EventsWrapper>
+      {selected && <Modal2 selected={selected} setSelected={setSelected} />}
     </>
   );
 };

@@ -37,13 +37,14 @@ const Introducing = ({ selected, setSelected }) => {
         <IntroduceImage onClick={() => setSelected(fourthImg)}>
           <img src={fourthImg} alt="fourth_img" />
         </IntroduceImage>
-        <Arrow bottom="true" red="true">
+        <Arrow bottom2="true" red="true">
           <svg
             className="arrow"
             xmlns="http://www.w3.org/2000/svg"
             width="35"
             height="35.91"
-            viewBox="0 0 35 35.91">
+            viewBox="0 0 35 35.91"
+          >
             <path
               id="FontAwsome_arrow-down_"
               data-name="FontAwsome (arrow-down)"

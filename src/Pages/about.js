@@ -34,35 +34,57 @@ const About = () => {
       });
 
     fs.collection("Descriptions")
-    .doc("About-Desc")
-    .get()
-    .then((doc) => {
-      if (doc.exists && mounted) {
-        setDesc(doc.data().desc);
-      }
-    });
+      .doc("About-Desc")
+      .get()
+      .then((doc) => {
+        if (doc.exists && mounted) {
+          setDesc(doc.data().desc);
+        }
+      });
 
     return () => {
       mounted = false;
     };
-
   }, []);
-
-  
 
   return (
     <>
       <PhotoWrapper>
         <PhotoImageWrapper>
-          <AboutHeader>Tiecoura n'daou</AboutHeader>
-          <AboutContent>{desc}</AboutContent>
-          <Line />
+          <AboutHeader
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5 }}
+          >
+            Tiecoura n'daou
+          </AboutHeader>
+          <AboutContent
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5 }}
+          >
+            {desc}
+          </AboutContent>
+          <Line
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5 }}
+          />
           <AboutInfo>
-            <AboutImage onClick={() => setSelected(profile)}>
+            <AboutImage
+              onClick={() => setSelected(profile)}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5 }}
+            >
               <img src={profile} alt="" />
             </AboutImage>
           </AboutInfo>
-          <Line />
+          <Line
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5 }}
+          />
         </PhotoImageWrapper>
       </PhotoWrapper>
       {selected && <Modal2 selected={selected} setSelected={setSelected} />}

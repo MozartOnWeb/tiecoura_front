@@ -162,7 +162,7 @@ const Hero = () => {
                     y2="35.338"
                     transform="translate(1.656)"
                     fill="none"
-                    stroke="#e2293f"
+                    stroke="#FFFDFF"
                     strokeWidth="3"
                   />
                   <line
@@ -171,7 +171,7 @@ const Hero = () => {
                     y2="38.651"
                     transform="translate(38.651 0.552) rotate(90)"
                     fill="none"
-                    stroke="#e2293f"
+                    stroke="#FFFDFF"
                     strokeWidth="3"
                   />
                 </g>
@@ -186,7 +186,7 @@ const Hero = () => {
                     y2="35.338"
                     transform="translate(1.656 0)"
                     fill="none"
-                    stroke="#e2293f"
+                    stroke="#FFFDFF"
                     strokeWidth="3"
                   />
                   <line
@@ -195,7 +195,7 @@ const Hero = () => {
                     y2="38.651"
                     transform="translate(38.651 0.552) rotate(90)"
                     fill="none"
-                    stroke="#e2293f"
+                    stroke="#FFFDFF"
                     strokeWidth="3"
                   />
                 </g>
@@ -210,7 +210,7 @@ const Hero = () => {
                     y2="35.338"
                     transform="translate(1.656 0)"
                     fill="none"
-                    stroke="#e2293f"
+                    stroke="#FFFDFF"
                     strokeWidth="3"
                   />
                   <line
@@ -219,7 +219,7 @@ const Hero = () => {
                     y2="38.651"
                     transform="translate(38.651 0.552) rotate(90)"
                     fill="none"
-                    stroke="#e2293f"
+                    stroke="#FFFDFF"
                     strokeWidth="3"
                   />
                 </g>
@@ -234,7 +234,7 @@ const Hero = () => {
                     y2="35.338"
                     transform="translate(1.656 0)"
                     fill="none"
-                    stroke="#e2293f"
+                    stroke="#FFFDFF"
                     strokeWidth="3"
                   />
                   <line
@@ -243,7 +243,7 @@ const Hero = () => {
                     y2="38.651"
                     transform="translate(38.651 0.552) rotate(90)"
                     fill="none"
-                    stroke="#e2293f"
+                    stroke="#FFFDFF"
                     strokeWidth="3"
                   />
                 </g>
@@ -298,7 +298,7 @@ const Hero = () => {
             height="35.91"
             viewBox="0 0 35 35.91"
             initial={{
-              y: 25,
+              y: 35,
               opacity: 0.2,
             }}
             animate={{
@@ -308,8 +308,6 @@ const Hero = () => {
             transition={{
               duration: 1.5,
               yoyo: Infinity,
-              type: "spring",
-              stiffness: 80,
             }}
           >
             <path

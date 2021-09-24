@@ -16,7 +16,7 @@ export const PageNavLinks = styled(motion.div)`
     flex-direction: column;
     margin: 80px auto 0px auto;
     width: 280px;
-    height: 80px;
+    height: 100px;
   }
   ${down("s")} {
     width: 230px;
@@ -28,9 +28,10 @@ export const PageNavLinks = styled(motion.div)`
     }
     ${down("sm")} {
       font-size: 14px;
+      margin-top: 10px;
     }
     &.active {
-      -webkit-text-stroke: 1px ${(props) => props.theme.red};
+      -webkit-text-stroke: 1px ${(props) => props.theme.white};
       -webkit-text-fill-color: transparent;
     }
     .menu-link-arrow {

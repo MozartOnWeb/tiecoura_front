@@ -1,6 +1,9 @@
 // Import Styled components
 import styled from "styled-components";
 
+// Import Framer Motion
+import { motion } from "framer-motion";
+
 // Import Styled Breakpoints
 import { down } from "styled-breakpoints";
 
@@ -32,7 +35,7 @@ export const SingleName = styled.div`
     text-decoration: none;
     cursor: pointer;
     font-size: 14px;
-    color: ${(props) => props.theme.red};
+    color: ${(props) => props.theme.white};
     font-family: ${(props) => props.theme.bodyFont};
     text-transform: uppercase;
   }
@@ -48,6 +51,7 @@ export const EventImage = styled.div`
   margin-top: 15px;
   margin-bottom: 15px;
   border-radius: 15px;
+  cursor: pointer;
   img {
     border-radius: 15px;
     width: 100%;
@@ -77,7 +81,7 @@ export const EventInfos = styled.div`
   }
 `;
 
-export const EventDesc = styled.div`
+export const EventDesc = styled(motion.div)`
   color: ${(props) => props.theme.white};
   font-family: ${(props) => props.theme.bodyFont};
   font-weight: 300;
@@ -98,7 +102,7 @@ export const EventDesc = styled.div`
     width: 30px;
     margin-bottom: 30px;
     margin-right: 20px;
-    border-color: ${(props) => props.theme.red};
+    border-color: ${(props) => props.theme.white};
     float: left;
   }
 `;

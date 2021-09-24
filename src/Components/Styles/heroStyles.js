@@ -16,9 +16,10 @@ export const BackgroundImage = styled(motion.div)`
 
 export const HeroContainer = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
   margin-bottom: 50px;
+  position: relative;
 `;
 
 export const HeroWrapper = styled.div`
@@ -110,7 +111,7 @@ export const HeroImages = styled.div`
       z-index: 2;
       transition: 0.7s ease-in-out .5s;
       position: absolute;
-      color: ${(props) => props.theme.red};
+      color: ${(props) => props.theme.white};
       font-family: ${(props) => props.theme.linkFont};
       font-size: 20px;
       text-transform: uppercase;
@@ -180,7 +181,7 @@ export const HeroImages = styled.div`
       z-index: 2;
       transition: 0.7s ease-in-out .5s;
       position: absolute;
-      color: ${(props) => props.theme.red};
+      color: ${(props) => props.theme.white};
       font-family: ${(props) => props.theme.linkFont};
       font-size: 20px;
       text-transform: uppercase;
@@ -242,7 +243,7 @@ export const HeroImages = styled.div`
       z-index: 2;
       transition: 0.7s ease-in-out .5s;
       position: absolute;
-      color: ${(props) => props.theme.red};
+      color: ${(props) => props.theme.white};
       font-family: ${(props) => props.theme.linkFont};
       font-size: 20px;
       text-transform: uppercase;
@@ -301,8 +302,7 @@ export const HeroInfo = styled.div`
     }
   }
   .outline {
-    -webkit-text-stroke: 1px ${(props) => props.theme.white};
-    -webkit-text-fill-color: transparent;
+    color: ${(props) => props.theme.white};
     font-size: 40px;
     text-transform: uppercase;
     font-weight: 800;
@@ -319,7 +319,7 @@ export const HeroInfo = styled.div`
   }
   h1 {
     font-size: 75px;
-    color: ${(props) => props.theme.red};
+    color: ${(props) => props.theme.white};
     text-transform: uppercase;
     font-weight: 800;
     margin-bottom: -30px;

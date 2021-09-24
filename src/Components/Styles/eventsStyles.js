@@ -89,7 +89,7 @@ export const EventInfos = styled.div`
   padding: 10px;
   h2 {
     font-size: 16px;
-    color: ${(props) => props.theme.red};
+    color: ${(props) => props.theme.white};
     margin: 5px 0;
   }
   p {

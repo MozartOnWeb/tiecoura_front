@@ -15,7 +15,7 @@ import {
 
 // Import Styled Components
 import { Logo, WelcomeDesc } from "./Styles/welcomeStyles";
-import { Button } from "../layout";
+import { Button2 } from "../layout";
 
 const Welcome = () => {
   const [image, setImage] = useState([]);
@@ -41,14 +41,15 @@ const Welcome = () => {
   return (
     <WelcomeWrapper>
       <Logo>Follio</Logo>
-      <Button welcome="true" to="/home">
+      <Button2 welcome="true" to="/home">
         Entrez
         <svg
           className="arrow"
           xmlns="http://www.w3.org/2000/svg"
           width="35"
           height="35.91"
-          viewBox="0 0 35 35.91">
+          viewBox="0 0 35 35.91"
+        >
           <path
             id="FontAwsome_arrow-down_"
             data-name="FontAwsome (arrow-down)"
@@ -57,7 +58,7 @@ const Welcome = () => {
             fill="#fffdff"
           />
         </svg>
-      </Button>
+      </Button2>
       <WelcomeDesc>
         <motion.h3>Tiècoura N'Daou</motion.h3>
         <motion.p>{desc}</motion.p>

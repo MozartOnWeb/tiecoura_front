@@ -59,7 +59,7 @@ export const Logo = styled(motion.h2)`
   font-family: ${(props) => props.theme.mainFont};
   font-weight: 400;
   text-transform: uppercase;
-  color: ${(props) => props.theme.red};
+  color: ${(props) => props.theme.white};
   ${down("md")} {
     font-size: 20px;
     margin-left: 30px;

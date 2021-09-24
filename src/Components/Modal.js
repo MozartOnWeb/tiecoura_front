@@ -10,19 +10,12 @@ import "slick-carousel/slick/slick-theme.css";
 
 // Import Icons
 import { AiOutlineCloseCircle } from "react-icons/ai";
-import { AiOutlineDownload } from "react-icons/ai";
 
-// Import React Link
-import { Link } from "react-router-dom";
-
-// Import custom arrows 
-import { NextArrow2, PrevArrow2} from "./CustomArrows"
-
+// Import custom arrows
+import { NextArrow2, PrevArrow2 } from "./CustomArrows";
 
 const Modal = ({ selected, setSelected, images }) => {
-
-const result = images.filter((image) => image.url !== selected);
-
+  const result = images.filter((image) => image.url !== selected);
 
   const setting2 = {
     dots: false,
@@ -58,9 +51,6 @@ const result = images.filter((image) => image.url !== selected);
             </div>
           ))}
         </Slider>
-        <Link to={selected} download target="_blank">
-          <AiOutlineDownload className="svg2" />
-        </Link>
       </ImgContainer>
     </Backdrop>
   );

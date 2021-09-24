@@ -76,7 +76,7 @@ const Footer = () => {
           "service_vtmcx0w",
           "template_795uobf",
           tempParams,
-          "user_IIuS4KGyfguClJ5SOMIMs",
+          "user_IIuS4KGyfguClJ5SOMIMs"
         )
         .then(
           (response) => {
@@ -87,7 +87,7 @@ const Footer = () => {
           },
           (err) => {
             notifyError();
-          },
+          }
         );
     }
   };
@@ -214,18 +214,20 @@ const Footer = () => {
                   placeholder="votre message"
                   value={message}
                   onChange={onMessage}
-                  required></textarea>
+                  required
+                ></textarea>
               </form>
             </FooterForm>
             <FooterInfos>
-              <Submit onClick={sendEmail}>
+              <Submit white="true" onClick={sendEmail}>
                 Envoyer{" "}
                 <svg
                   className="arrow"
                   xmlns="http://www.w3.org/2000/svg"
                   width="35"
                   height="35.91"
-                  viewBox="0 0 35 35.91">
+                  viewBox="0 0 35 35.91"
+                >
                   <path
                     id="FontAwsome_arrow-down_"
                     data-name="FontAwsome (arrow-down)"

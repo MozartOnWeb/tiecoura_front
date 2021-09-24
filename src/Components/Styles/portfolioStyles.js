@@ -17,7 +17,7 @@ export const PortfolioWrapper = styled.div`
   color: ${(props) => props.theme.black};
   margin-bottom: 50px;
   .active {
-    -webkit-text-stroke: 1px ${(props) => props.theme.red};
+    -webkit-text-stroke: 1px ${(props) => props.theme.white};
     -webkit-text-fill-color: transparent;
     font-weight: bold;
   }
@@ -41,7 +41,7 @@ export const PortfolioHeadline = styled.h1`
   font-weight: bold;
   text-transform: uppercase;
   margin: 0px;
-  font-family: ${props => props.theme.linkFont};
+  font-family: ${(props) => props.theme.linkFont};
   ${only("md")} {
     font-size: 28px;
   }
@@ -58,8 +58,8 @@ export const PortfolioLinks = styled.div`
   justify-content: center;
   h2 {
     text-transform: uppercase;
-    color: ${(props) => props.theme.red};
-    border-bottom: 1px solid ${(props) => props.theme.red};
+    color: ${(props) => props.theme.black};
+    border-bottom: 1px solid ${(props) => props.theme.black};
     font-family: ${(props) => props.theme.linkFont};
   }
   ${only("md")} {
@@ -140,10 +140,12 @@ export const PortfolioImage = styled.div`
     bottom: 5%;
     right: 5%;
     text-decoration: none;
-    border-bottom: 1px solid ${(props) => props.theme.red};
-    color: ${(props) => props.theme.red};
+    border-bottom: 1px solid ${(props) => props.theme.white};
+    color: ${(props) => props.theme.white};
     text-transform: uppercase;
     font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
   }
 `;
 

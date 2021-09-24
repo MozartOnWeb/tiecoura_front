@@ -59,7 +59,8 @@ const WhoIAM = ({ selected, setSelected }) => {
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
                 height="35.91"
-                viewBox="0 0 35 35.91">
+                viewBox="0 0 35 35.91"
+              >
                 <path
                   id="FontAwsome_arrow-down_"
                   data-name="FontAwsome (arrow-down)"
@@ -76,22 +77,25 @@ const WhoIAM = ({ selected, setSelected }) => {
               xmlns="http://www.w3.org/2000/svg"
               width="791.246"
               height="524.948"
-              viewBox="0 0 791.246 524.948">
+              viewBox="0 0 791.246 524.948"
+            >
               <g
                 id="Groupe_5"
                 data-name="Groupe 5"
-                transform="translate(-190 -344.052)">
+                transform="translate(-190 -344.052)"
+              >
                 <g
                   id="Groupe_1"
                   data-name="Groupe 1"
-                  transform="translate(190 245)">
+                  transform="translate(190 245)"
+                >
                   <line
                     id="Ligne_2"
                     data-name="Ligne 2"
                     y2="35.338"
                     transform="translate(1.656)"
                     fill="none"
-                    stroke="#e2293f"
+                    stroke="#161616"
                     strokeWidth="3"
                   />
                   <line
@@ -100,21 +104,22 @@ const WhoIAM = ({ selected, setSelected }) => {
                     y2="38.651"
                     transform="translate(38.651 0.552) rotate(90)"
                     fill="none"
-                    stroke="#e2293f"
+                    stroke="#161616"
                     strokeWidth="3"
                   />
                 </g>
                 <g
                   id="Groupe_3"
                   data-name="Groupe 3"
-                  transform="translate(191.656 985) rotate(-90)">
+                  transform="translate(191.656 985) rotate(-90)"
+                >
                   <line
                     id="Ligne_2-2"
                     data-name="Ligne 2"
                     y2="35.338"
                     transform="translate(1.656 0)"
                     fill="none"
-                    stroke="#e2293f"
+                    stroke="#161616"
                     strokeWidth="3"
                   />
                   <line
@@ -123,21 +128,22 @@ const WhoIAM = ({ selected, setSelected }) => {
                     y2="38.651"
                     transform="translate(38.651 0.552) rotate(90)"
                     fill="none"
-                    stroke="#e2293f"
+                    stroke="#161616"
                     strokeWidth="3"
                   />
                 </g>
                 <g
                   id="Groupe_4"
                   data-name="Groupe 4"
-                  transform="translate(981.246 985.344) rotate(180)">
+                  transform="translate(981.246 985.344) rotate(180)"
+                >
                   <line
                     id="Ligne_2-3"
                     data-name="Ligne 2"
                     y2="35.338"
                     transform="translate(1.656 0)"
                     fill="none"
-                    stroke="#e2293f"
+                    stroke="#161616"
                     strokeWidth="3"
                   />
                   <line
@@ -146,21 +152,22 @@ const WhoIAM = ({ selected, setSelected }) => {
                     y2="38.651"
                     transform="translate(38.651 0.552) rotate(90)"
                     fill="none"
-                    stroke="#e2293f"
+                    stroke="#161616"
                     strokeWidth="3"
                   />
                 </g>
                 <g
                   id="Groupe_2"
                   data-name="Groupe 2"
-                  transform="translate(977.38 245) rotate(90)">
+                  transform="translate(977.38 245) rotate(90)"
+                >
                   <line
                     id="Ligne_2-4"
                     data-name="Ligne 2"
                     y2="35.338"
                     transform="translate(1.656 0)"
                     fill="none"
-                    stroke="#e2293f"
+                    stroke="#161616"
                     strokeWidth="3"
                   />
                   <line
@@ -169,7 +176,7 @@ const WhoIAM = ({ selected, setSelected }) => {
                     y2="38.651"
                     transform="translate(38.651 0.552) rotate(90)"
                     fill="none"
-                    stroke="#e2293f"
+                    stroke="#161616"
                     strokeWidth="3"
                   />
                 </g>

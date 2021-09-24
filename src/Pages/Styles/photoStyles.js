@@ -40,6 +40,12 @@ export const PhotoImageWrapper = styled(motion.div)`
       ${down("xs")} {
         height: 300px;
         width: 250px;
+        iframe,
+        video {
+          height: 100%;
+          width: 100%;
+          object-fit: fill;
+        }
       }
     }
   }
@@ -71,7 +77,7 @@ export const PhotoImageWrapper = styled(motion.div)`
   }
 `;
 
-export const AboutHeader = styled.h1`
+export const AboutHeader = styled(motion.h1)`
   text-align: center;
   text-transform: uppercase;
   font-family: ${(props) => props.theme.linkFont};
@@ -83,7 +89,7 @@ export const AboutHeader = styled.h1`
   }
 `;
 
-export const AboutContent = styled.p`
+export const AboutContent = styled(motion.p)`
   text-align: center;
   font-family: ${(props) => props.theme.mainFont};
   font-size: 14px;
@@ -100,28 +106,26 @@ export const AboutContent = styled.p`
   }
 `;
 
-export const Line = styled.hr`
-  border-color: ${(props) => props.theme.red};
+export const Line = styled(motion.hr)`
+  border-color: ${(props) => props.theme.white};
 `;
 
-export const AboutInfo = styled.div`
+export const AboutInfo = styled(motion.div)`
   margin-top: 20px;
   width: 100%;
   display: flex;
   justify-content: space-between;
 `;
-export const AboutImage = styled.div`
+export const AboutImage = styled(motion.div)`
   width: 100%;
   height: 350px;
   margin-bottom: 15px;
-  border: 1px solid ${(props) => props.theme.black};
   border-radius: 15px;
 
   img,
   video,
   iframe {
     border-radius: 15px;
-    border: 1px solid ${(props) => props.theme.black};
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -143,7 +147,7 @@ export const SingleName = styled.div`
   a {
     text-decoration: none;
     cursor: pointer;
-    color: ${(props) => props.theme.red};
+    color: ${(props) => props.theme.white};
     font-family: ${(props) => props.theme.bodyFont};
     text-transform: uppercase;
   }
@@ -173,7 +177,7 @@ export const SerieInfo = styled.p`
     width: 30px;
     margin-bottom: 30px;
     margin-right: 20px;
-    border-color: ${(props) => props.theme.red};
+    border-color: ${(props) => props.theme.white};
     float: left;
   }
 `;

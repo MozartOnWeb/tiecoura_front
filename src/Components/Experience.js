@@ -146,7 +146,7 @@ const Experience = ({ selected, setSelected }) => {
                       y2="35.338"
                       transform="translate(1.656)"
                       fill="none"
-                      stroke="#e2293f"
+                      stroke="#FFFDFF"
                       strokeWidth="3"
                     />
                     <line
@@ -155,7 +155,7 @@ const Experience = ({ selected, setSelected }) => {
                       y2="38.651"
                       transform="translate(38.651 0.552) rotate(90)"
                       fill="none"
-                      stroke="#e2293f"
+                      stroke="#FFFDFF"
                       strokeWidth="3"
                     />
                   </g>
@@ -170,7 +170,7 @@ const Experience = ({ selected, setSelected }) => {
                       y2="35.338"
                       transform="translate(1.656 0)"
                       fill="none"
-                      stroke="#e2293f"
+                      stroke="#FFFDFF"
                       strokeWidth="3"
                     />
                     <line
@@ -179,7 +179,7 @@ const Experience = ({ selected, setSelected }) => {
                       y2="38.651"
                       transform="translate(38.651 0.552) rotate(90)"
                       fill="none"
-                      stroke="#e2293f"
+                      stroke="#FFFDFF"
                       strokeWidth="3"
                     />
                   </g>
@@ -194,7 +194,7 @@ const Experience = ({ selected, setSelected }) => {
                       y2="35.338"
                       transform="translate(1.656 0)"
                       fill="none"
-                      stroke="#e2293f"
+                      stroke="#FFFDFF"
                       strokeWidth="3"
                     />
                     <line
@@ -203,7 +203,7 @@ const Experience = ({ selected, setSelected }) => {
                       y2="38.651"
                       transform="translate(38.651 0.552) rotate(90)"
                       fill="none"
-                      stroke="#e2293f"
+                      stroke="#FFFDFF"
                       strokeWidth="3"
                     />
                   </g>
@@ -218,7 +218,7 @@ const Experience = ({ selected, setSelected }) => {
                       y2="35.338"
                       transform="translate(1.656 0)"
                       fill="none"
-                      stroke="#e2293f"
+                      stroke="#FFFDFF"
                       strokeWidth="3"
                     />
                     <line
@@ -227,7 +227,7 @@ const Experience = ({ selected, setSelected }) => {
                       y2="38.651"
                       transform="translate(38.651 0.552) rotate(90)"
                       fill="none"
-                      stroke="#e2293f"
+                      stroke="#FFFDFF"
                       strokeWidth="3"
                     />
                   </g>
