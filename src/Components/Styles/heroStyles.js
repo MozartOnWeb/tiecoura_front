@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { only, down } from "styled-breakpoints";
-import { motion } from "framer-motion";
 
-export const BackgroundImage = styled(motion.div)`
+export const BackgroundImage = styled.div`
   width: 100vw;
   height: 100vh;
   overflow: hidden;
