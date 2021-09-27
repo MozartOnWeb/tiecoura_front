@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Import firestore
 import { fs } from "../firebase/config";
@@ -12,33 +12,35 @@ import {
   MenuDesc,
 } from "./Styles/menuStyles";
 
-const Menu = ({ state, setState, handleMenu }) => {
+const Menu = ({ handleMenu }) => {
   const [serieName, setSerieName] = useState([]);
   const [eventName, setEventName] = useState([]);
 
-  fs.collection("series")
-    .orderBy("timestamp", "desc")
-    .onSnapshot((snapshot) => {
-      const tempNames = [];
-      snapshot.forEach((doc) => {
-        tempNames.push({ ...doc.data(), id: doc.id });
+  useEffect(() => {
+    fs.collection("series")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) => {
+        const tempNames = [];
+        snapshot.forEach((doc) => {
+          tempNames.push({ ...doc.data(), id: doc.id });
+        });
+        setSerieName(tempNames);
       });
-      setSerieName(tempNames);
-    });
 
-  fs.collection("Actualities")
-    .orderBy("timestamp", "desc")
-    .onSnapshot((snapshot) => {
-      const tempNames = [];
-      snapshot.forEach((doc) => {
-        tempNames.push({ ...doc.data(), id: doc.id });
+    fs.collection("Actualities")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) => {
+        const tempNames = [];
+        snapshot.forEach((doc) => {
+          tempNames.push({ ...doc.data(), id: doc.id });
+        });
+        setEventName(tempNames);
       });
-      setEventName(tempNames);
-    });
+  }, []);
 
   return (
     <MenuContainer className="menu-container">
-      <div className="menu-close" onClick={handleMenu}>
+      <div className="menu-close" onClick={() => handleMenu()}>
         <svg
           className="svg2"
           xmlns="http://www.w3.org/2000/svg"

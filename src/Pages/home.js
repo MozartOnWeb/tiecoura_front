@@ -11,7 +11,7 @@ import {
   WhoIAM,
   Menu,
   Header,
-  Events
+  Events,
 } from "../Components";
 
 //
@@ -30,7 +30,7 @@ const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       gsap.to(".load_container", {
-        duration: 0.8,
+        duration: 0.5,
         y: "-100%",
         ease: "Power6.inOut",
         stagger: {
@@ -61,7 +61,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="home-wrapper">
       <LoadingScreen />
       <Menu state={state} setState={setState} handleMenu={handleMenu} />
       <Header state={state} setState={setState} handleMenu={handleMenu} />

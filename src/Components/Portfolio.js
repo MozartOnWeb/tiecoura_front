@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Import Components
 import { Button } from "../layout";
@@ -26,15 +26,17 @@ import {
 const Portfolio = ({ selected, setSelected }) => {
   const [serieName, setSerieName] = useState([]);
 
-  fs.collection("series")
-    .orderBy("timestamp", "desc")
-    .onSnapshot((snapshot) => {
-      const tempNames = [];
-      snapshot.forEach((doc) => {
-        tempNames.push({ ...doc.data(), id: doc.id });
+  useEffect(() => {
+    fs.collection("series")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) => {
+        const tempNames = [];
+        snapshot.forEach((doc) => {
+          tempNames.push({ ...doc.data(), id: doc.id });
+        });
+        setSerieName(tempNames);
       });
-      setSerieName(tempNames);
-    });
+  }, []);
 
   return (
     <>
@@ -50,7 +52,8 @@ const Portfolio = ({ selected, setSelected }) => {
             {serieName.slice(0, 6).map((image) => (
               <PortfolioImage
                 key={image.name}
-                onClick={() => setSelected(image.images[0].url)}>
+                onClick={() => setSelected(image.images[0].url)}
+              >
                 <img src={image.images[0].url} alt={image.name} />
                 <Link to={`/photo/${image.name}`}>{image.name}</Link>
               </PortfolioImage>
@@ -65,7 +68,8 @@ const Portfolio = ({ selected, setSelected }) => {
               xmlns="http://www.w3.org/2000/svg"
               width="35"
               height="35.91"
-              viewBox="0 0 35 35.91">
+              viewBox="0 0 35 35.91"
+            >
               <path
                 id="FontAwsome_arrow-down_"
                 data-name="FontAwsome (arrow-down)"

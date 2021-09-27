@@ -74,17 +74,17 @@ const Experience = ({ selected, setSelected }) => {
           setYears(doc.data().number);
         }
       });
-  }, []);
 
-  fs.collection("series")
-    .orderBy("timestamp", "desc")
-    .onSnapshot((snapshot) => {
-      const tempNames = [];
-      snapshot.forEach((doc) => {
-        tempNames.push({ ...doc.data(), id: doc.id });
+    fs.collection("series")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) => {
+        const tempNames = [];
+        snapshot.forEach((doc) => {
+          tempNames.push({ ...doc.data(), id: doc.id });
+        });
+        setSerieName(tempNames);
       });
-      setSerieName(tempNames);
-    });
+  }, []);
 
   // Use Window size
   const size = useWindowSize();

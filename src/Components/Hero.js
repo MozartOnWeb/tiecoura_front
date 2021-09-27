@@ -75,17 +75,17 @@ const Hero = () => {
           setFirstVid(doc.data().url);
         }
       });
-  }, []);
 
-  fs.collection("series")
-    .orderBy("timestamp", "desc")
-    .onSnapshot((snapshot) => {
-      const tempNames = [];
-      snapshot.forEach((doc) => {
-        tempNames.push({ ...doc.data(), id: doc.id });
+    fs.collection("series")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) => {
+        const tempNames = [];
+        snapshot.forEach((doc) => {
+          tempNames.push({ ...doc.data(), id: doc.id });
+        });
+        setSerieName(tempNames);
       });
-      setSerieName(tempNames);
-    });
+  }, []);
 
   // Slider Settings
   const settings = {
@@ -103,12 +103,15 @@ const Hero = () => {
       {
         breakpoint: 414,
         settings: {
-          arrows: true,
           infinite: true,
           slidesToScroll: 1,
+          speed: 700,
           slidesToShow: 1,
+          autoplay: true,
           swipeToSlide: false,
           autoplaySpeed: 15000,
+          fade: true,
+          arrows: false,
         },
       },
       {
@@ -298,16 +301,18 @@ const Hero = () => {
             height="35.91"
             viewBox="0 0 35 35.91"
             initial={{
-              y: 35,
-              opacity: 0.2,
+              y: 20,
+              opacity: 0.5,
             }}
             animate={{
               y: 0,
               opacity: 1,
             }}
             transition={{
-              duration: 1.5,
-              yoyo: Infinity,
+              duration: 0.5,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "reverse",
             }}
           >
             <path

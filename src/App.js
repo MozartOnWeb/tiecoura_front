@@ -28,7 +28,6 @@ const GlobalStyles = createGlobalStyle`
   }
   html, body {
     overflow-x: hidden;
-    scroll-behavior: smooth;
     .toast_conatiner {
       text-transform: uppercase;
     }
@@ -81,6 +80,9 @@ const GlobalStyles = createGlobalStyle`
         }
       }
       }
+    }
+    .home-wrapper {
+      height: 100%;
     }
   }
 `;

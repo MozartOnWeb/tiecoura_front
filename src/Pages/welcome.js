@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // Import Framer Motion
 import { motion } from "framer-motion";
@@ -21,22 +21,24 @@ const Welcome = () => {
   const [image, setImage] = useState([]);
   const [desc, setDesc] = useState("");
 
-  fs.collection("Welcome").onSnapshot((snapshot) => {
-    const tempImage = [];
-    snapshot.forEach((doc) => {
-      tempImage.push({ ...doc.data(), id: doc.id });
+  useEffect(() => {
+    fs.collection("Welcome").onSnapshot((snapshot) => {
+      const tempImage = [];
+      snapshot.forEach((doc) => {
+        tempImage.push({ ...doc.data(), id: doc.id });
+      });
+      setImage(tempImage);
     });
-    setImage(tempImage);
-  });
 
-  fs.collection("Descriptions")
-    .doc("Welcome-Desc")
-    .get()
-    .then((doc) => {
-      if (doc.exists) {
-        setDesc(doc.data().desc);
-      }
-    });
+    fs.collection("Descriptions")
+      .doc("Welcome-Desc")
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          setDesc(doc.data().desc);
+        }
+      });
+  }, []);
 
   return (
     <WelcomeWrapper>

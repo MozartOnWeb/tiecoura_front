@@ -50,20 +50,22 @@ const Header = ({ state, handleMenu }) => {
           {/* Logo Component */}
 
           {/* Humburger Components */}
-          <div onClick={handleMenu}>
+          <div onClick={() => handleMenu()}>
             <svg
               className="svg2"
               xmlns="http://www.w3.org/2000/svg"
               width="101"
               height="101"
-              viewBox="0 0 101 101">
+              viewBox="0 0 101 101"
+            >
               <g
                 id="Ellipse_2"
                 data-name="Ellipse 2"
                 fill="none"
                 stroke="#000"
                 strokeWidth="4"
-                strokeDasharray="1 15">
+                strokeDasharray="1 15"
+              >
                 <circle cx="50.5" cy="50.5" r="50.5" stroke="none" />
                 <circle cx="50.5" cy="50.5" r="48.5" fill="none" />
               </g>
@@ -73,7 +75,8 @@ const Header = ({ state, handleMenu }) => {
               xmlns="http://www.w3.org/2000/svg"
               width="27.429"
               height="24"
-              viewBox="0 0 27.429 24">
+              viewBox="0 0 27.429 24"
+            >
               <path
                 id="FontAwsome_bars_"
                 data-name="FontAwsome (bars)"
