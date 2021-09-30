@@ -47,10 +47,10 @@ export const MenuContainer = styled(motion.div)`
       }
     }
     ${down("md")} {
-      margin-right: -50px;
+      margin-right: -120px;
     }
     ${down("sm")} {
-      margin-right: -60px;
+      margin-right: -130px;
     }
   }
 `;
