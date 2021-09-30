@@ -5,8 +5,8 @@
   "targets": {
     "tiecoura-01": {
       "hosting": {
-        "front": [
-          "tiecoura-front"
+        "front2": [
+          "tiecoura-front2"
         ]
       }
     }

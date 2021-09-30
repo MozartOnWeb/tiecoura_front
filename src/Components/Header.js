@@ -6,6 +6,9 @@ import gsap from "gsap";
 import { HeaderContainer, HeaderWrapper, Logo } from "./Styles/headerStyles";
 import { Container } from "../layout";
 
+// Import LOGO
+import LOGO from "../Assets/images/LOGO.jpg";
+
 const Header = ({ state, handleMenu }) => {
   useEffect(() => {
     const menuContainer = window.document.querySelector(".menu-container");
@@ -46,7 +49,7 @@ const Header = ({ state, handleMenu }) => {
         {/* Header Container */}
         <HeaderContainer>
           {/* Logo Component */}
-          <Logo>Follio</Logo>
+          <Logo src={LOGO} alt="" />
           {/* Logo Component */}
 
           {/* Humburger Components */}

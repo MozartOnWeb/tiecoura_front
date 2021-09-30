@@ -13,6 +13,9 @@ import {
   WelcomeGradient,
 } from "./Styles/welcomeStyles";
 
+// Import LOGO
+import LOGO from "../Assets/images/LOGO.jpg";
+
 // Import Styled Components
 import { Logo, WelcomeDesc } from "./Styles/welcomeStyles";
 import { Button2 } from "../layout";
@@ -42,7 +45,7 @@ const Welcome = () => {
 
   return (
     <WelcomeWrapper>
-      <Logo>Follio</Logo>
+      <Logo src={LOGO} alt="" />
       <Button2 welcome="true" to="/home">
         Entrez
         <svg

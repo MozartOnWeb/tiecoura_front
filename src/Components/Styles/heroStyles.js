@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { only, down } from "styled-breakpoints";
 
 export const BackgroundImage = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
   img,
@@ -14,7 +14,7 @@ export const BackgroundImage = styled.div`
 `;
 
 export const HeroContainer = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 90vh;
   overflow: hidden;
   margin-bottom: 50px;
@@ -28,7 +28,8 @@ export const HeroWrapper = styled.div`
   position: absolute;
   top: 53%;
   left: 50%;
-  width: 85%;
+  width: 75%;
+
   transform: translate(-50%, -50%);
   ${only("md")} {
     flex-direction: column;
@@ -75,15 +76,16 @@ export const HeroImages = styled.div`
   ${down("xs")} {
     margin-bottom: 4%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
+    height: 100%;
   }
   .squared1 {
     grid-area: squared1;
-    width: 180px;
-    height: 185px;
+    width: 200px;
+    height: 200px;
     cursor: pointer;
     position: relative;
     ::after {
@@ -152,8 +154,8 @@ export const HeroImages = styled.div`
   }
   .squared2 {
     grid-area: squared2;
-    width: 180px;
-    height: 185px;
+    width: 200px;
+    height: 200px;
     cursor: pointer;
     position: relative;
     ::after {
@@ -214,8 +216,8 @@ export const HeroImages = styled.div`
   }
   .rectangle {
     grid-area: rectangle;
-    width: 180px;
-    height: 390px;
+    width: 200px;
+    height: 420px;
     cursor: pointer;
     position: relative;
     ::after {

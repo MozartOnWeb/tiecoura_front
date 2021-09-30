@@ -142,7 +142,7 @@ const Hero = () => {
       <Container>
         <HeroWrapper>
           {/* Hero Informations */}
-          <HeroInfo>
+          {/* <HeroInfo>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="791.246"
@@ -255,7 +255,7 @@ const Hero = () => {
             <p className="outline">Tiecoura</p>
             <h1>African</h1>
             <h1>Studio.</h1>
-          </HeroInfo>
+          </HeroInfo> */}
           {/* Hero Informations */}
 
           {/* Hero Images */}

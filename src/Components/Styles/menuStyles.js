@@ -20,7 +20,7 @@ export const MenuContainer = styled(motion.div)`
   }
   .menu-close {
     position: absolute;
-    right: 135px;
+    right: 200px;
     top: 46px;
     display: flex;
     align-items: center;

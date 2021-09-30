@@ -69,19 +69,15 @@ export const WelcomeImage = styled.div`
   }
 `;
 
-export const Logo = styled(motion.h2)`
+export const Logo = styled.img`
   z-index: 99;
   position: absolute;
   left: 5%;
   top: 5%;
   cursor: pointer;
-  font-family: ${(props) => props.theme.mainFont};
-  font-size: 30px;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.white};
+  width: 80px;
   ${down("sm")} {
-    font-size: 24px;
+    width: 70px;
     left: 10%;
   }
 `;

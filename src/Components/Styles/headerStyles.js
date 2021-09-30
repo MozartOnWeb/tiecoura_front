@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export const HeaderWrapper = styled(motion.div)`
   position: absolute;
-  width: 100vw;
+  width: 100%;
   ${down("xs")} {
     height: 90px;
   }
@@ -15,6 +15,7 @@ export const HeaderContainer = styled(motion.div)`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding: 10px 0px;
 
   div {
     z-index: 99;
@@ -22,7 +23,6 @@ export const HeaderContainer = styled(motion.div)`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 20px;
     .svg1 {
       width: 25px;
       cursor: pointer;
@@ -53,19 +53,16 @@ export const HeaderContainer = styled(motion.div)`
   }
 `;
 
-export const Logo = styled(motion.h2)`
+export const Logo = styled.img`
   z-index: 99;
   cursor: pointer;
-  font-family: ${(props) => props.theme.mainFont};
-  font-weight: 400;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.white};
+  width: 70px;
   ${down("md")} {
-    font-size: 20px;
+    width: 60px;
     margin-left: 30px;
   }
   ${down("sm")} {
-    font-size: 20px;
+    width: 60px;
     margin-left: 20px;
   }
 `;
