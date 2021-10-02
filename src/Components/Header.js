@@ -49,7 +49,7 @@ const Header = ({ state, handleMenu }) => {
         {/* Header Container */}
         <HeaderContainer>
           {/* Logo Component */}
-          <Logo src={LOGO} alt="" />
+          {/* <Logo src={LOGO} alt="" /> */}
           {/* Logo Component */}
 
           {/* Humburger Components */}

@@ -26,7 +26,7 @@ export const HeroWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  top: 53%;
+  top: 40%;
   left: 50%;
   width: 75%;
 

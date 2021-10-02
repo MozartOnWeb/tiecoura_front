@@ -12,10 +12,11 @@ export const HeaderWrapper = styled(motion.div)`
 
 export const HeaderContainer = styled(motion.div)`
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: end;
   width: 100%;
   padding: 10px 0px;
+  z-index: 99;
 
   div {
     z-index: 99;
@@ -23,6 +24,7 @@ export const HeaderContainer = styled(motion.div)`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 15px;
     .svg1 {
       width: 25px;
       cursor: pointer;
