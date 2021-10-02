@@ -18,7 +18,9 @@ export const HeaderContainer = styled(motion.div)`
   padding: 10px 0px;
   z-index: 99;
 
-  div {
+  .overlay-className {
+  }
+  .menu-container {
     z-index: 99;
     position: relative;
     display: flex;

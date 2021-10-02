@@ -35,8 +35,8 @@ export const Arrow = styled(motion.div)`
   ${(props) =>
     props.bottom2 &&
     css`
-      position: relative;
-      margin-top: 15px;
+      position: relative !important;
+      margin-bottom: 0px;
       svg path {
         fill: ${(props) => props.theme.white};
       }
@@ -63,13 +63,10 @@ export const Arrow = styled(motion.div)`
       svg path {
         fill: ${(props) => props.theme.white};
       }
-      svg {
-        transform: translate(-30%, -50%);
-      }
     `}
 `;
 
-export const Button = styled(motion(NavLink))`
+export const Button = styled(NavLink)`
   color: ${(props) => props.theme.white};
   font-family: ${(props) => props.theme.linkFont};
   text-transform: uppercase;
@@ -81,7 +78,7 @@ export const Button = styled(motion(NavLink))`
   transition: hover 0.8s;
   svg {
     position: absolute;
-    top: -55%;
+    top: -25%;
     left: 110%;
     width: 15px;
     transform: rotate(-90deg);
@@ -178,7 +175,7 @@ export const Button2 = styled(NavLink)`
   position: relative;
   svg {
     position: absolute;
-    top: -55%;
+    top: -25%;
     left: 110%;
     width: 15px;
     transform: rotate(-90deg);
@@ -205,6 +202,10 @@ export const Button2 = styled(NavLink)`
     border-width: 0 0 1px;
     border-style: solid;
     border-color: ${(props) => props.theme.white};
+  }
+
+  &:hover {
+    color: ${(props) => props.theme.white};
   }
 `;
 

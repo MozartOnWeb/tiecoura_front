@@ -3,6 +3,7 @@ import { only, down } from "styled-breakpoints";
 
 export const IntroduceWrapper = styled.div`
   width: 80%;
+  height: 90vh;
   padding: 20px 10px;
   margin: 0 auto;
   position: relative;
@@ -21,7 +22,7 @@ export const IntroduceWrapper = styled.div`
     border-radius: 0px;
   }
   ${down("xs")} {
-    padding: 50px 0px;
+    height: 90vh;
   }
 
   p {

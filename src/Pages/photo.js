@@ -39,7 +39,7 @@ const Photo = () => {
   const [serieDesc, setSerieDesc] = useState("");
   const [selected, setSelected] = useState(null);
 
-  const match = useRouteMatch("/photo/:serie");
+  const match = useRouteMatch("/photos/:serie");
   const { serie } = match.params;
 
   useEffect(() => {
@@ -92,8 +92,8 @@ const Photo = () => {
           dots: false,
           arrows: true,
           infinite: true,
-          slidesToScroll: 3,
-          slidesToShow: 3,
+          slidesToScroll: 2,
+          slidesToShow: 2,
           swipeToSlide: true,
         },
       },

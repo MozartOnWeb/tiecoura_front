@@ -15,10 +15,10 @@ export const ExperienceWrapper = styled(motion.div)`
   align-items: center;
   border-radius: 15px;
   margin-bottom: 50px;
-  ${only("md")} {
+  ${down("md")} {
     padding: 30px;
     flex-direction: column-reverse;
-    height: 60vh;
+    height: 95vh;
     position: relative;
   }
 `;
@@ -91,6 +91,7 @@ export const ExperienceInfo = styled(motion.div)`
       text-align: center;
       margin-bottom: 30px;
       text-transform: uppercase;
+      margin-top: 20px;
     }
     ${down("s")} {
       font-size: 10px;
@@ -157,13 +158,16 @@ export const ExperienceBoxes = styled(motion.div)`
 `;
 
 export const ExperienceBox = styled(motion.div)`
-  width: 90px;
-  height: 90px;
+  width: 95px;
+  height: 95px;
   padding: 15px;
-  text-align: center;
   border-radius: 15px;
   cursor: pointer;
   z-index: 3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
   background-color: ${(props) => props.theme.white};
   color: ${(props) => props.theme.black};
   ${(props) =>
@@ -173,8 +177,8 @@ export const ExperienceBox = styled(motion.div)`
       color: ${(props) => props.theme.white};
     `}
   ${down("xs")} {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     padding: 15px;
   }
   .headline {
@@ -183,6 +187,7 @@ export const ExperienceBox = styled(motion.div)`
     font-weight: 700;
     font-size: 18px;
     text-transform: uppercase;
+    margin: 0px;
     ${down("xs")} {
       font-size: 16px;
     }
@@ -192,10 +197,11 @@ export const ExperienceBox = styled(motion.div)`
   }
   .subline {
     font-family: ${(props) => props.theme.mainFont};
-    font-size: 13px;
+    font-size: 12px;
     margin-top: 0px;
     text-align: center;
     text-transform: uppercase;
+    margin: 0px;
     ${down("xs")} {
       font-size: 12px;
     }

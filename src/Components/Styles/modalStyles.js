@@ -1,5 +1,6 @@
 // Import styled components
 import styled from "styled-components";
+import { down } from "styled-breakpoints";
 
 export const Backdrop = styled.div`
   position: fixed;
@@ -23,6 +24,10 @@ export const ImgContainer = styled.div`
   border-top: 2px solid ${(props) => props.theme.white};
   border-radius: 15px;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.7);
+  ${down("sm")} {
+    width: 75%;
+    height: 75%;
+  }
   .svg1 {
     position: absolute;
     left: 3%;

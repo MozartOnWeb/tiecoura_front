@@ -12,7 +12,7 @@ import {
   MenuDesc,
 } from "./Styles/menuStyles";
 
-const Menu = ({ handleMenu }) => {
+const Menu = () => {
   const [serieName, setSerieName] = useState([]);
   const [eventName, setEventName] = useState([]);
 
@@ -40,7 +40,7 @@ const Menu = ({ handleMenu }) => {
 
   return (
     <MenuContainer className="menu-container">
-      <div className="menu-close" onClick={() => handleMenu()}>
+      <div className="menu-close">
         <svg
           className="svg2"
           xmlns="http://www.w3.org/2000/svg"

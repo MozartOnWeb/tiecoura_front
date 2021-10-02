@@ -1,59 +1,78 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
-import gsap from "gsap";
+// Import Antd
+import { Menu, Dropdown } from "antd";
+import "antd/dist/antd.css";
+
+// Import Link
+import { Link } from "react-router-dom";
+
+// Import Firebase
+import { fs } from "../firebase/config";
 
 // Import Styled-Components
-import { HeaderContainer, HeaderWrapper, Logo } from "./Styles/headerStyles";
+import { HeaderContainer, HeaderWrapper } from "./Styles/headerStyles";
 import { Container } from "../layout";
 
-// Import LOGO
-import LOGO from "../Assets/images/LOGO.jpg";
+const Header = () => {
+  const [serieName, setSerieName] = useState([]);
+  const [eventName, setEventName] = useState([]);
 
-const Header = ({ state, handleMenu }) => {
   useEffect(() => {
-    const menuContainer = window.document.querySelector(".menu-container");
-
-    if (state.clicked === false) {
-      // Close Menu
-
-      gsap.to(menuContainer, {
-        duration: 0.8,
-        y: "-100%",
-        ease: "power6.inOut",
-        stagger: {
-          amount: 0.08,
-        },
+    fs.collection("series")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) => {
+        const tempNames = [];
+        snapshot.forEach((doc) => {
+          tempNames.push({ ...doc.data(), id: doc.id });
+        });
+        setSerieName(tempNames);
       });
-    } else if (
-      state.clicked === true ||
-      (state.clicked === true && state.initial === null)
-    ) {
-      // Open Menu
-      gsap.to(menuContainer, {
-        duration: 0,
-        y: "0%",
-      });
-      gsap.from(menuContainer, {
-        duration: 0.8,
-        y: "-100%",
-        ease: "power6.inOut",
-        transformOrigin: "right top",
-        skewY: 2,
-      });
-    }
-  });
 
+    fs.collection("Actualities")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) => {
+        const tempNames = [];
+        snapshot.forEach((doc) => {
+          tempNames.push({ ...doc.data(), id: doc.id });
+        });
+        setEventName(tempNames);
+      });
+  }, []);
+
+  // Menu
+  const menu = (
+    <Menu style={{ marginTop: "25px" }} overlayClassName="overlay-className">
+      <Menu.Item key="0">
+        {serieName.slice(0, 1).map((link) => (
+          <Link key={link.name} big="true" to={`/photos/${link.name}`}>
+            PHOTOS
+          </Link>
+        ))}
+      </Menu.Item>
+      <Menu.Item key="1">
+        <Link to="/videos">VIDEOS</Link>
+      </Menu.Item>
+      <Menu.Item key="2">
+        {eventName.slice(0, 1).map((link) => (
+          <Link key={link.name} big="true" to={`/events/${link.name}`}>
+            EVENTS
+          </Link>
+        ))}
+      </Menu.Item>
+      <Menu.Divider />
+      <Menu.Item key="3">
+        <Link to="/about">A PROPOS</Link>
+      </Menu.Item>
+    </Menu>
+  );
   return (
     <HeaderWrapper>
       <Container>
         {/* Header Container */}
         <HeaderContainer>
-          {/* Logo Component */}
-          {/* <Logo src={LOGO} alt="" /> */}
-          {/* Logo Component */}
-
           {/* Humburger Components */}
-          <div onClick={() => handleMenu()}>
+          <div className="menu-container">
             <svg
               className="svg2"
               xmlns="http://www.w3.org/2000/svg"
@@ -73,21 +92,36 @@ const Header = ({ state, handleMenu }) => {
                 <circle cx="50.5" cy="50.5" r="48.5" fill="none" />
               </g>
             </svg>
-            <svg
-              className="svg1"
-              xmlns="http://www.w3.org/2000/svg"
-              width="27.429"
-              height="24"
-              viewBox="0 0 27.429 24"
-            >
-              <path
-                id="FontAwsome_bars_"
-                data-name="FontAwsome (bars)"
-                d="M.98,64.408H26.449a.98.98,0,0,0,.98-.98V60.98a.98.98,0,0,0-.98-.98H.98a.98.98,0,0,0-.98.98v2.449A.98.98,0,0,0,.98,64.408Zm0,9.8H26.449a.98.98,0,0,0,.98-.98V70.776a.98.98,0,0,0-.98-.98H.98a.98.98,0,0,0-.98.98v2.449A.98.98,0,0,0,.98,74.2Zm0,9.8H26.449a.98.98,0,0,0,.98-.98V80.571a.98.98,0,0,0-.98-.98H.98a.98.98,0,0,0-.98.98V83.02A.98.98,0,0,0,.98,84Z"
-                transform="translate(0 -60)"
-                fill="#000"
-              />
-            </svg>
+
+            <div style={{ zIndex: "99", marginTop: "5px" }}>
+              <Dropdown
+                overlay={menu}
+                trigger={["click"]}
+                placement="bottomCenter"
+              >
+                <Link
+                  to=""
+                  className="ant-dropdown-link"
+                  onClick={(e) => e.preventDefault()}
+                >
+                  <svg
+                    className="svg1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="27.429"
+                    height="24"
+                    viewBox="0 0 27.429 24"
+                  >
+                    <path
+                      id="FontAwsome_bars_"
+                      data-name="FontAwsome (bars)"
+                      d="M.98,64.408H26.449a.98.98,0,0,0,.98-.98V60.98a.98.98,0,0,0-.98-.98H.98a.98.98,0,0,0-.98.98v2.449A.98.98,0,0,0,.98,64.408Zm0,9.8H26.449a.98.98,0,0,0,.98-.98V70.776a.98.98,0,0,0-.98-.98H.98a.98.98,0,0,0-.98.98v2.449A.98.98,0,0,0,.98,74.2Zm0,9.8H26.449a.98.98,0,0,0,.98-.98V80.571a.98.98,0,0,0-.98-.98H.98a.98.98,0,0,0-.98.98V83.02A.98.98,0,0,0,.98,84Z"
+                      transform="translate(0 -60)"
+                      fill="#000"
+                    />
+                  </svg>
+                </Link>
+              </Dropdown>
+            </div>
           </div>
           {/* Humburger Components */}
         </HeaderContainer>

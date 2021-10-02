@@ -125,8 +125,8 @@ function App() {
             <Pages className="pages">
               <PageNav />
               <CloseMenu />
-              <Route component={Video} path="/video" />
-              <Route component={Photo} path="/photo/:serie" exact />
+              <Route component={Video} path="/videos" />
+              <Route component={Photo} path="/photos/:serie" exact />
               <Route component={About} path="/about" />
               <Route component={EventPages} path="/events/:event" />
             </Pages>

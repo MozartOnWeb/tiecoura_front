@@ -66,6 +66,7 @@ export const SingleEvent = styled.div`
       word-spacing: 2.5px;
       font-weight: normal;
       position: relative;
+      text-decoration: underline;
       ${down("s")} {
         font-size: 12px;
         margin: 0px 50px;

@@ -9,7 +9,6 @@ import {
   Introducing,
   Portfolio,
   WhoIAM,
-  Menu,
   Header,
   Events,
 } from "../Components";
@@ -20,12 +19,6 @@ import LoadingScreen from "../Components/LoadingScreen";
 const Home = () => {
   const [selected, setSelected] = useState(null);
   const [videoSelected, setVideoSelected] = useState(null);
-
-  const [state, setState] = useState({
-    initial: false,
-    clicked: null,
-    menuName: "Menu",
-  });
 
   useEffect(() => {
     setTimeout(() => {
@@ -40,31 +33,10 @@ const Home = () => {
     }, 4000);
   }, []);
 
-  const handleMenu = () => {
-    if (state.initial === false) {
-      setState({
-        initial: null,
-        clicked: true,
-        menu: "Close",
-      });
-    } else if (state.clicked === true) {
-      setState({
-        clicked: !state.clicked,
-        menuName: "Menu",
-      });
-    } else if (state.clicked === false) {
-      setState({
-        clicked: !state.clicked,
-        menuName: "Close",
-      });
-    }
-  };
-
   return (
     <div className="home-wrapper">
       <LoadingScreen />
-      <Menu state={state} setState={setState} handleMenu={handleMenu} />
-      <Header state={state} setState={setState} handleMenu={handleMenu} />
+      <Header />
       <Hero selected={selected} setSelected={setSelected} />
       <Experience selected={videoSelected} setSelected={setVideoSelected} />
       <Portfolio selected={selected} setSelected={setSelected} />

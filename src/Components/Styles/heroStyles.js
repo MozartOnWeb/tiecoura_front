@@ -26,20 +26,23 @@ export const HeroWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  top: 40%;
-  left: 50%;
+  top: 42%;
+  left: 45%;
   width: 75%;
 
   transform: translate(-50%, -50%);
   ${only("md")} {
     flex-direction: column;
     top: 50%;
+    left: 50%;
     height: 80vh;
   }
   ${down("xs")} {
     flex-direction: column;
     top: 50%;
+    left: 50%;
     height: 65vh;
+    width: 90%;
   }
   ${down("s")} {
     height: 68vh;
@@ -109,6 +112,7 @@ export const HeroImages = styled.div`
       }
     }
     h2 {
+      font-weight: 600;
       z-index: 2;
       transition: 0.7s ease-in-out .5s;
       position: absolute;
@@ -136,7 +140,7 @@ export const HeroImages = styled.div`
       }
       ${down("xs")} {
         width: 100%;
-        height: 180px;
+        height: 220px;
       }
       ${down("s")} {
         width: 100%;
@@ -179,6 +183,7 @@ export const HeroImages = styled.div`
       }
     }
     h2 {
+      font-weight: 600;
       z-index: 2;
       transition: 0.7s ease-in-out .5s;
       position: absolute;
@@ -241,6 +246,7 @@ export const HeroImages = styled.div`
       }
     }
     h2 {
+      font-weight: 600;
       z-index: 2;
       transition: 0.7s ease-in-out .5s;
       position: absolute;
