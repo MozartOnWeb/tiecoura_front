@@ -55,13 +55,13 @@ const Portfolio = ({ selected, setSelected }) => {
                 onClick={() => setSelected(image.images[0].url)}
               >
                 <img src={image.images[0].url} alt={image.name} />
-                <Link to={`/photo/${image.name}`}>{image.name}</Link>
+                <Link to={`/photos/${image.name}`}>{image.name}</Link>
               </PortfolioImage>
             ))}
           </PortfolioImages>
         </PortfolioWrapper>
         {serieName.slice(0, 1).map((link) => (
-          <Button key={link.name} center="true" to={`/photo/${link.name}`}>
+          <Button key={link.name} center="true" to={`/photos/${link.name}`}>
             VOIR PLUS
             <svg
               className="arrow"

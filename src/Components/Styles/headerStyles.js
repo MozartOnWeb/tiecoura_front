@@ -13,13 +13,11 @@ export const HeaderWrapper = styled(motion.div)`
 export const HeaderContainer = styled(motion.div)`
   display: flex;
   align-items: center;
-  justify-content: end;
   width: 100%;
   padding: 10px 0px;
   z-index: 99;
+  justify-content: flex-end;
 
-  .overlay-className {
-  }
   .menu-container {
     z-index: 99;
     position: relative;

@@ -156,13 +156,6 @@ export const Button = styled(NavLink)`
     -webkit-text-stroke: 1px ${(props) => props.theme.white};
     -webkit-text-fill-color: transparent;
   }
-
-  ${down("sm")} {
-    &:hover {
-      -webkit-text-stroke: inherit;
-      -webkit-text-fill-color: inherit;
-    }
-  }
 `;
 export const Button2 = styled(NavLink)`
   color: ${(props) => props.theme.white};

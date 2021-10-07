@@ -22,7 +22,7 @@ export const IntroduceWrapper = styled.div`
     border-radius: 0px;
   }
   ${down("xs")} {
-    height: 90vh;
+    height: 100vh;
   }
 
   p {
@@ -43,7 +43,10 @@ export const IntroduceWrapper = styled.div`
 
   svg {
     width: 22px;
-    margin-top: 20px;
+    margin-top: 0px;
+    ${down("xs")} {
+      position: relative;
+    }
   }
 `;
 
@@ -56,6 +59,7 @@ export const IntroduceImage = styled.div`
   }
   ${down("xs")} {
     width: 80%;
+    margin: 0px;
   }
   img,
   video {

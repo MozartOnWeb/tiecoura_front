@@ -18,8 +18,11 @@ export const ExperienceWrapper = styled(motion.div)`
   ${down("md")} {
     padding: 30px;
     flex-direction: column-reverse;
-    height: 95vh;
+    height: 100vh;
     position: relative;
+  }
+  ${down("xs")} {
+    padding: 20px;
   }
 `;
 
@@ -53,9 +56,9 @@ export const ExperienceInfo = styled(motion.div)`
   flex-direction: column;
   width: 400px;
   height: 500px;
-  ${only("md")} {
-    justify-content: space-around;
-    height: 250px;
+  ${down("md")} {
+    justify-content: space-between;
+    height: 90%;
     width: 100%;
     a {
       position: absolute;
@@ -64,14 +67,18 @@ export const ExperienceInfo = styled(motion.div)`
   }
   ${down("xs")} {
     width: 80%;
+    justify-content: space-around;
     a {
-      margin-top: 40px;
+      position: relative;
+      bottom: 0%;
+      margin: 0px;
     }
   }
 
   ${down("s")} {
+    margin-top: 25px;
     a {
-      font-size: 14px;
+      display: none;
     }
   }
 
@@ -89,18 +96,23 @@ export const ExperienceInfo = styled(motion.div)`
     ${down("xs")} {
       font-size: 11px;
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 0px;
       text-transform: uppercase;
-      margin-top: 20px;
+      margin-top: 0px;
     }
     ${down("s")} {
       font-size: 10px;
       text-align: left;
-      margin-bottom: 30px;
+      margin-bottom: 0px;
     }
   }
   .experienceDesc {
     hyphens: auto;
+    ${down("s")} {
+      font-size: 10px;
+      margin-bottom: 0px;
+      text-align: center;
+    }
   }
 `;
 
@@ -117,6 +129,7 @@ export const ExperienceStats = styled(motion.div)`
   ${down("xs")} {
     width: 250px;
     height: 280px;
+    margin: 0px;
   }
   ${down("s")} {
     width: 230px;

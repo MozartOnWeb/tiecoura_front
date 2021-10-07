@@ -248,7 +248,7 @@ const Experience = ({ selected, setSelected }) => {
           {/* Experience Stats */}
 
           {serieName.slice(0, 1).map((link) => (
-            <Button key={link.name} arrow="false" to={`/photo/${link.name}`}>
+            <Button key={link.name} arrow="false" to={`/photos/${link.name}`}>
               Explorer
               <svg
                 className="arrow"

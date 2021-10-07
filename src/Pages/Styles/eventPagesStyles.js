@@ -25,7 +25,7 @@ export const EventContainer = styled.div`
 export const EventNames = styled.div`
   width: 80vw;
   margin: 0 auto;
-  margin: 30px auto 30px auto;
+  margin: 50px auto 30px auto;
 `;
 
 export const SingleName = styled.div`

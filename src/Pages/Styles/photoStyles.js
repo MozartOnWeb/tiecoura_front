@@ -82,6 +82,7 @@ export const AboutHeader = styled(motion.h1)`
   text-transform: uppercase;
   font-family: ${(props) => props.theme.linkFont};
   font-size: 16px;
+  margin-top: 30px;
   color: ${(props) => props.theme.white};
   letter-spacing: 1.2px;
   ${down("xs")} {
