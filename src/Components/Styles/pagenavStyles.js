@@ -31,21 +31,9 @@ export const PageNavLinks = styled(motion.div)`
       margin-top: 10px;
     }
     &.active {
-      -webkit-text-stroke: 1px ${(props) => props.theme.white};
-      -webkit-text-fill-color: transparent;
-    }
-    .menu-link-arrow {
-      display: none;
-      width: 0px;
-    }
-
-    &:hover {
-      .menu-link-arrow {
-        display: block;
-        width: 15px;
-        ${down("md")} {
-          display: none;
-        }
+      color: ${(props) => props.theme.red};
+      &::after {
+        border-color: ${(props) => props.theme.red};
       }
     }
   }

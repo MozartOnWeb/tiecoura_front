@@ -3,8 +3,25 @@ import { only, down } from "styled-breakpoints";
 
 export const PortfolioContainer = styled.div`
   .portfolio-button {
-    ${down("xs")} {
-      left: 35%;
+    color: ${(props) => props.theme.black};
+    svg {
+      top: -40%;
+      path {
+        fill: ${(props) => props.theme.black};
+      }
+    }
+    &::after {
+      border-color: ${(props) => props.theme.black};
+    }
+
+    &:hover {
+      color: ${(props) => props.theme.red};
+      svg path {
+        fill: ${(props) => props.theme.red};
+      }
+      &::after {
+        border-color: ${(props) => props.theme.red};
+      }
     }
   }
 `;
@@ -111,6 +128,8 @@ export const PortfolioImage = styled.div`
   width: 250px;
   height: 250px;
   position: relative;
+  overflow: hidden;
+  border-radius: 15px;
   ${only("md")} {
     width: 130px;
     height: 180px;
@@ -126,6 +145,10 @@ export const PortfolioImage = styled.div`
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+    transition: 0.5s ease-in-out 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   &:first-child {
     grid-column: 1 / 3;
@@ -146,6 +169,11 @@ export const PortfolioImage = styled.div`
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 1.5px;
+    transition: 0.5s ease-in-out 0.3s;
+    &:hover {
+      border-bottom: 1px solid ${(props) => props.theme.red};
+      color: ${(props) => props.theme.red};
+    }
   }
 `;
 

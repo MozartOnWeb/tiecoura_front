@@ -95,7 +95,7 @@ export const AboutContent = styled(motion.p)`
   font-size: 14px;
   color: ${(props) => props.theme.white};
   width: 550px;
-  margin: 20px auto;
+  margin: 20px auto 30px auto;
   line-height: 22px;
   ${down("xs")} {
     width: 100%;
@@ -107,7 +107,7 @@ export const AboutContent = styled(motion.p)`
 `;
 
 export const Line = styled(motion.hr)`
-  border-color: ${(props) => props.theme.white};
+  border-color: ${(props) => props.theme.red};
 `;
 
 export const AboutInfo = styled(motion.div)`
@@ -121,6 +121,8 @@ export const AboutImage = styled(motion.div)`
   height: 350px;
   margin-bottom: 15px;
   border-radius: 15px;
+  cursor: pointer;
+  overflow: hidden;
 
   img,
   video,
@@ -132,6 +134,10 @@ export const AboutImage = styled(motion.div)`
     cursor: pointer;
     transform-origin: top;
     object-position: 30% 25%;
+    transition: 0.5s ease-in-out 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 `;
 
@@ -177,7 +183,7 @@ export const SerieInfo = styled.p`
     width: 30px;
     margin-bottom: 30px;
     margin-right: 20px;
-    border-color: ${(props) => props.theme.white};
+    border-color: ${(props) => props.theme.red};
     float: left;
   }
 `;

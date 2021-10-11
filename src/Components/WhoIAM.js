@@ -72,7 +72,9 @@ const WhoIAM = ({ selected, setSelected }) => {
             </Button>
           </WhoInfo>
           <WhoImage onClick={() => setSelected(profile)}>
-            <img src={profile} alt="profile_image" />
+            <div>
+              <img src={profile} alt="profile_image" />
+            </div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="791.246"
@@ -119,7 +121,7 @@ const WhoIAM = ({ selected, setSelected }) => {
                     y2="35.338"
                     transform="translate(1.656 0)"
                     fill="none"
-                    stroke="#161616"
+                    stroke="#E2293F"
                     strokeWidth="3"
                   />
                   <line
@@ -128,7 +130,7 @@ const WhoIAM = ({ selected, setSelected }) => {
                     y2="38.651"
                     transform="translate(38.651 0.552) rotate(90)"
                     fill="none"
-                    stroke="#161616"
+                    stroke="#E2293F"
                     strokeWidth="3"
                   />
                 </g>
@@ -167,7 +169,7 @@ const WhoIAM = ({ selected, setSelected }) => {
                     y2="35.338"
                     transform="translate(1.656 0)"
                     fill="none"
-                    stroke="#161616"
+                    stroke="#E2293F"
                     strokeWidth="3"
                   />
                   <line
@@ -176,7 +178,7 @@ const WhoIAM = ({ selected, setSelected }) => {
                     y2="38.651"
                     transform="translate(38.651 0.552) rotate(90)"
                     fill="none"
-                    stroke="#161616"
+                    stroke="#E2293F"
                     strokeWidth="3"
                   />
                 </g>

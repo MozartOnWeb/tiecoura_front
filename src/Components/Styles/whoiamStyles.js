@@ -54,6 +54,26 @@ export const WhoInfo = styled.div`
     margin-top: 50px;
   }
   a {
+    color: ${(props) => props.theme.black};
+    svg {
+      top: -60%;
+      path {
+        fill: ${(props) => props.theme.black};
+      }
+    }
+    &::after {
+      border-color: ${(props) => props.theme.black};
+    }
+
+    &:hover {
+      color: ${(props) => props.theme.red};
+      svg path {
+        fill: ${(props) => props.theme.red};
+      }
+      &::after {
+        border-color: ${(props) => props.theme.red};
+      }
+    }
     top: 30px;
     right: 0px;
     ${down("md")} {
@@ -91,6 +111,7 @@ export const WhoImage = styled.div`
   width: 250px;
   position: relative;
   text-align: left;
+
   ${down("md")} {
     height: 250px;
     width: 250px;
@@ -104,6 +125,13 @@ export const WhoImage = styled.div`
     z-index: -1;
   }
 
+  div {
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
   img,
   video {
     z-index: 1;
@@ -112,6 +140,10 @@ export const WhoImage = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.5s ease-in-out 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   .introducing2 {
     height: 250px;

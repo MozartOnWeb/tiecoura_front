@@ -8,9 +8,9 @@ import { Link } from "react-router-dom";
 
 // Import SVGS
 import {
-  SiAdobepremiere,
+  SiAdobepremierepro,
+  SiAdobelightroom,
   SiAdobephotoshop,
-  SiAdobelightroomclassic,
 } from "react-icons/si";
 
 // Import Toastify
@@ -143,8 +143,8 @@ const Footer = () => {
             <FooterInfos>
               <FooterHeadline>Logiciels</FooterHeadline>
               <SvgContainer>
-                <SiAdobepremiere />
-                <SiAdobelightroomclassic />
+                <SiAdobepremierepro />
+                <SiAdobelightroom />
                 <SiAdobephotoshop />
               </SvgContainer>
             </FooterInfos>

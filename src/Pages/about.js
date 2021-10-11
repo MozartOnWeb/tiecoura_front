@@ -65,11 +65,6 @@ const About = () => {
           >
             {desc}
           </AboutContent>
-          <Line
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5 }}
-          />
           <AboutInfo>
             <AboutImage
               onClick={() => setSelected(profile)}

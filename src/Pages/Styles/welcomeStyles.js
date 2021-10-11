@@ -18,7 +18,7 @@ export const WelcomeWrapper = styled.div`
   a {
     position: absolute;
     bottom: 10%;
-    left: 20%;
+    left: 50%;
     transform: translateX(-50%);
     z-index: 99;
     svg {

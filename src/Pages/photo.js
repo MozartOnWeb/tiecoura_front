@@ -39,7 +39,7 @@ const Photo = () => {
   const [serieDesc, setSerieDesc] = useState("");
   const [selected, setSelected] = useState(null);
 
-  const match = useRouteMatch("/photo/:serie");
+  const match = useRouteMatch("/photos/:serie");
   const { serie } = match.params;
 
   useEffect(() => {
@@ -129,7 +129,7 @@ const Photo = () => {
         <Slider {...setting}>
           {serieName.map((serie) => (
             <SingleName key={serie.id}>
-              <NavLink activeClassName="active" to={`/photo/${serie.id}`}>
+              <NavLink activeClassName="active" to={`/photos/${serie.id}`}>
                 {serie.name}
               </NavLink>
             </SingleName>

@@ -79,7 +79,7 @@ export const FooterInfos = styled.div`
   span {
     font-size: 13px;
     font-family: ${(props) => props.theme.mainFont};
-    color: ${(props) => props.theme.white};
+    color: ${(props) => props.theme.red};
     font-weight: 300;
     letter-spacing: 1.2px;
     position: absolute;
@@ -101,7 +101,7 @@ export const FooterInfos = styled.div`
 export const FooterHeadline = styled.h4`
   font-size: 14px;
   font-family: ${(props) => props.theme.linkFont};
-  color: ${(props) => props.theme.white};
+  color: ${(props) => props.theme.red};
   letter-spacing: 1.2px;
   text-transform: uppercase;
   ${down("md")} {
@@ -142,14 +142,18 @@ export const SvgContainer = styled.div`
     cursor: pointer;
     width: 30px;
     height: 30px;
+    transition: 0.5s ease-in-out 0.3s;
     ${down("xs")} {
       width: 20px;
     }
     path {
       fill: ${(props) => props.theme.white};
-      &:hover {
-        opacity: 0.5;
-        transition: 0.5s ease-in;
+      transition: 0.5s ease-in-out 0.3s;
+    }
+    &:hover {
+      opacity: 0.5;
+      path {
+        fill: ${(props) => props.theme.red};
       }
     }
   }
@@ -174,7 +178,7 @@ export const FooterForm = styled.div`
       font-size: 14px;
       padding: 10px 10px;
       border: none;
-      border-bottom: 1px solid ${(props) => props.theme.white};
+      border-bottom: 1px solid ${(props) => props.theme.red};
       background: rgba(255, 255, 255, 0.03);
       width: 100%;
       position: relative;

@@ -61,7 +61,7 @@ export const Arrow = styled(motion.div)`
     props.red &&
     css`
       svg path {
-        fill: ${(props) => props.theme.white};
+        fill: ${(props) => props.theme.red};
       }
       svg {
         transform: translate(-30%, -50%);
@@ -69,7 +69,7 @@ export const Arrow = styled(motion.div)`
     `}
 `;
 
-export const Button = styled(motion(NavLink))`
+export const Button = styled(NavLink)`
   color: ${(props) => props.theme.white};
   font-family: ${(props) => props.theme.linkFont};
   text-transform: uppercase;
@@ -78,7 +78,7 @@ export const Button = styled(motion(NavLink))`
   font-size: 14px;
   text-decoration: none;
   position: relative;
-  transition: hover 0.8s;
+  transition: 0.5s ease-in-out 0.3s;
   svg {
     position: absolute;
     top: -55%;
@@ -86,6 +86,7 @@ export const Button = styled(motion(NavLink))`
     width: 15px;
     transform: rotate(-90deg);
     path {
+      transition: 0.5s ease-in-out 0.3s;
       fill: ${(props) => props.theme.white};
     }
   }
@@ -153,22 +154,30 @@ export const Button = styled(motion(NavLink))`
     border-width: 0 0 1px;
     border-style: solid;
     border-color: ${(props) => props.theme.white};
+    transition: 0.5s ease-in-out 0.3s;
   }
 
   &:hover {
-    -webkit-text-stroke: 1px ${(props) => props.theme.white};
-    -webkit-text-fill-color: transparent;
+    /* -webkit-text-stroke: 1px ${(props) => props.theme.white};
+    -webkit-text-fill-color: transparent; */
+    color: ${(props) => props.theme.red};
+    svg path {
+      fill: ${(props) => props.theme.red};
+    }
+    &::after {
+      border-color: ${(props) => props.theme.red};
+    }
   }
 
-  ${down("sm")} {
+  /* ${down("sm")} {
     &:hover {
       -webkit-text-stroke: inherit;
       -webkit-text-fill-color: inherit;
     }
-  }
+  } */
 `;
 export const Button2 = styled(NavLink)`
-  color: ${(props) => props.theme.white};
+  color: ${(props) => props.theme.red};
   font-family: ${(props) => props.theme.linkFont};
   text-transform: uppercase;
   font-weight: 800;
@@ -183,7 +192,7 @@ export const Button2 = styled(NavLink)`
     width: 15px;
     transform: rotate(-90deg);
     path {
-      fill: ${(props) => props.theme.white};
+      fill: ${(props) => props.theme.red};
     }
   }
 
@@ -204,7 +213,7 @@ export const Button2 = styled(NavLink)`
     bottom: 0px;
     border-width: 0 0 1px;
     border-style: solid;
-    border-color: ${(props) => props.theme.white};
+    border-color: ${(props) => props.theme.red};
   }
 `;
 
@@ -253,8 +262,10 @@ export const Submit = styled.button`
     props.white &&
     css`
       color: ${(props) => props.theme.white};
+      transition: 0.5s ease-in-out 0.3s;
       svg path {
         fill: ${(props) => props.theme.white};
+        transition: 0.5s ease-in-out 0.3s;
       }
 
       &::after {
@@ -266,6 +277,17 @@ export const Submit = styled.button`
         border-width: 0 0 1px;
         border-style: solid;
         border-color: ${(props) => props.theme.white} !important;
+        transition: 0.5s ease-in-out 0.3s;
+      }
+
+      &:hover {
+        color: ${(props) => props.theme.red};
+        svg path {
+          fill: ${(props) => props.theme.red};
+        }
+        &::after {
+          border-color: ${(props) => props.theme.red} !important;
+        }
       }
     `}
 

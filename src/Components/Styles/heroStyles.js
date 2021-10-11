@@ -110,7 +110,7 @@ export const HeroImages = styled.div`
       z-index: 2;
       transition: 0.7s ease-in-out .5s;
       position: absolute;
-      color: ${(props) => props.theme.white};
+      color: ${(props) => props.theme.red};
       font-family: ${(props) => props.theme.linkFont};
       font-size: 20px;
       text-transform: uppercase;
@@ -118,6 +118,9 @@ export const HeroImages = styled.div`
       left: 50%;
       transform: translate(-50%, -50%);
       opacity: 0;
+      .dot {
+      color: ${(props) => props.theme.white};
+    }
         ${down("xs")} {
           font-size: 25px;
           left: 40%;
@@ -180,7 +183,7 @@ export const HeroImages = styled.div`
       z-index: 2;
       transition: 0.7s ease-in-out .5s;
       position: absolute;
-      color: ${(props) => props.theme.white};
+      color: ${(props) => props.theme.red};
       font-family: ${(props) => props.theme.linkFont};
       font-size: 20px;
       text-transform: uppercase;
@@ -188,6 +191,9 @@ export const HeroImages = styled.div`
       left: 50%;
       transform: translate(-50%, -50%);
       opacity: 0;
+      .dot {
+      color: ${(props) => props.theme.white};
+    }
     }
     a {
       text-decoration: none;
@@ -242,7 +248,7 @@ export const HeroImages = styled.div`
       z-index: 2;
       transition: 0.7s ease-in-out .5s;
       position: absolute;
-      color: ${(props) => props.theme.white};
+      color: ${(props) => props.theme.red};
       font-family: ${(props) => props.theme.linkFont};
       font-size: 20px;
       text-transform: uppercase;
@@ -250,6 +256,9 @@ export const HeroImages = styled.div`
       left: 50%;
       transform: translate(-50%, -50%);
       opacity: 0;
+      .dot {
+      color: ${(props) => props.theme.white};
+    }
     }
     a {
       text-decoration: none;
@@ -271,6 +280,7 @@ export const HeroImages = styled.div`
       height: 100%;
       object-fit: cover;
     }
+
 `;
 
 export const HeroInfo = styled.div`
@@ -301,7 +311,7 @@ export const HeroInfo = styled.div`
     }
   }
   .outline {
-    color: ${(props) => props.theme.white};
+    color: ${(props) => props.theme.red};
     font-size: 40px;
     text-transform: uppercase;
     font-weight: 800;
@@ -329,6 +339,9 @@ export const HeroInfo = styled.div`
     ${down("xs")} {
       font-size: 35px;
     }
+  }
+  .dot {
+    color: ${(props) => props.theme.red};
   }
 `;
 

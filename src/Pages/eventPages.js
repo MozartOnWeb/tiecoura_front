@@ -124,7 +124,12 @@ const EventPages = () => {
       <EventNames>
         <Slider {...setting}>
           {eventNames.map(({ name, id }) => (
-            <SingleName key={name}>
+            <SingleName
+              key={name}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5 }}
+            >
               <NavLink activeClassName="active" to={`/events/${id}`}>
                 {name}
               </NavLink>
@@ -150,21 +155,21 @@ const EventPages = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 1.5 }}
             >
-              <span>Lieu</span> : {location}
+              <span>Lieu :</span> {location}
             </motion.p>
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.5 }}
             >
-              <span>Date</span> : {date}
+              <span>Date :</span> {date}
             </motion.p>
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.5 }}
             >
-              <span>Heures</span> : {hour}
+              <span>Heures :</span> {hour}
             </motion.p>
           </EventInfos>
 

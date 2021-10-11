@@ -20,7 +20,6 @@ export const ImgContainer = styled.div`
   position: relative;
   width: 80%;
   height: 80%;
-  border-top: 2px solid ${(props) => props.theme.white};
   border-radius: 15px;
   box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.7);
   .svg1 {
@@ -29,7 +28,7 @@ export const ImgContainer = styled.div`
     top: 3%;
     width: 32px;
     height: 32px;
-    color: ${(props) => props.theme.white};
+    color: ${(props) => props.theme.red};
     cursor: pointer;
     z-index: 10;
   }
@@ -44,7 +43,7 @@ export const ImgContainer = styled.div`
       bottom: 3%;
       width: 32px;
       height: 32px;
-      color: ${(props) => props.theme.white};
+      color: ${(props) => props.theme.red};
       cursor: pointer;
       z-index: 10;
     }

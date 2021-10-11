@@ -28,7 +28,7 @@ export const EventNames = styled.div`
   margin: 30px auto 30px auto;
 `;
 
-export const SingleName = styled.div`
+export const SingleName = styled(motion.div)`
   position: relative;
   text-align: center;
   a {
@@ -41,6 +41,7 @@ export const SingleName = styled.div`
   }
   .active {
     font-weight: bold;
+    color: ${(props) => props.theme.red};
   }
 `;
 
@@ -52,11 +53,17 @@ export const EventImage = styled.div`
   margin-bottom: 15px;
   border-radius: 15px;
   cursor: pointer;
+  overflow: hidden;
+  border-radius: 15px;
   img {
     border-radius: 15px;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.5s ease-in-out 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 `;
 
@@ -74,6 +81,7 @@ export const EventInfos = styled.div`
       text-decoration: underline;
       font-weight: bold;
       letter-spacing: 1px;
+      color: ${(props) => props.theme.red};
     }
   }
   ${down("sm")} {
@@ -102,7 +110,7 @@ export const EventDesc = styled(motion.div)`
     width: 30px;
     margin-bottom: 30px;
     margin-right: 20px;
-    border-color: ${(props) => props.theme.white};
+    border-color: ${(props) => props.theme.red};
     float: left;
   }
 `;

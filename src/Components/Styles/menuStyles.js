@@ -11,7 +11,7 @@ export const MenuContainer = styled(motion.div)`
   left: 0;
   top: 0;
   background-color: ${(props) => props.theme.black};
-  z-index: 100;
+  z-index: 101;
   ${down("md")} {
     padding: 50px 0px;
     width: 100%;
@@ -173,15 +173,6 @@ export const MenuSocials = styled.div`
     width: 90%;
     left: 50%;
     transform: translateX(-50%);
-  }
-  a {
-    &:hover {
-      -webkit-text-stroke: 0.4px ${(props) => props.theme.white};
-      -webkit-text-fill-color: transparent;
-    }
-    &::after {
-      border-color: ${(props) => props.theme.white};
-    }
   }
 `;
 

@@ -50,6 +50,8 @@ export const IntroduceImage = styled.div`
   width: 800px;
   height: 350px;
   cursor: pointer;
+  overflow: hidden;
+  border-radius: 15px;
   ${only("md")} {
     width: 600px;
   }
@@ -62,6 +64,10 @@ export const IntroduceImage = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.5s ease-in-out 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   .introducing {
     height: 350px;

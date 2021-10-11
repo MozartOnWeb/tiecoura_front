@@ -9,12 +9,21 @@ import { Container } from "../layout";
 const Header = ({ state, handleMenu }) => {
   useEffect(() => {
     const menuContainer = window.document.querySelector(".menu-container");
+    const redBg = window.document.querySelector(".red-bg");
 
     if (state.clicked === false) {
       // Close Menu
 
       gsap.to(menuContainer, {
         duration: 0.8,
+        y: "-100%",
+        ease: "power6.inOut",
+        stagger: {
+          amount: 1,
+        },
+      });
+      gsap.to(redBg, {
+        duration: 1,
         y: "-100%",
         ease: "power6.inOut",
         stagger: {
@@ -31,6 +40,17 @@ const Header = ({ state, handleMenu }) => {
         y: "0%",
       });
       gsap.from(menuContainer, {
+        duration: 1,
+        y: "-100%",
+        ease: "power6.inOut",
+        transformOrigin: "right top",
+        skewY: 2,
+      });
+      gsap.to(redBg, {
+        duration: 0,
+        y: "0%",
+      });
+      gsap.from(redBg, {
         duration: 0.8,
         y: "-100%",
         ease: "power6.inOut",

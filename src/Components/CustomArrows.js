@@ -8,7 +8,7 @@ export const NextArrow = (props) => {
       style={{
         ...style,
         display: "block",
-        color: "#FFFDFF",
+        color: "#E2293F",
         width: "30px",
         height: "30px",
       }}
@@ -25,7 +25,7 @@ export const PrevArrow = (props) => {
       style={{
         ...style,
         display: "block",
-        color: "#FFFDFF",
+        color: "#E2293F",
         width: "30px",
         height: "30px",
       }}
@@ -41,7 +41,7 @@ export const NextArrow2 = (props) => {
       style={{
         ...style,
         display: "block",
-        color: "#FFFDFF",
+        color: "#E2293F",
         width: "35px",
         height: "35px",
         marginRight: "-15px",
@@ -59,7 +59,7 @@ export const PrevArrow2 = (props) => {
       style={{
         ...style,
         display: "block",
-        color: "#FFFDFF",
+        color: "#E2293F",
         width: "35px",
         height: "35px",
         marginLeft: "-15px",
@@ -77,7 +77,7 @@ export const NextArrow3 = (props) => {
       style={{
         ...style,
         display: "block",
-        color: "#161616",
+        color: "#E2293F",
         width: "35px",
         height: "35px",
         marginRight: "-35px",
@@ -95,7 +95,7 @@ export const PrevArrow3 = (props) => {
       style={{
         ...style,
         display: "block",
-        color: "#161616",
+        color: "#E2293F",
         width: "35px",
         height: "35px",
         marginLeft: "-35px",

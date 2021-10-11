@@ -46,6 +46,13 @@ const GlobalStyles = createGlobalStyle`
       align-items: center;
       justify-content: center;
       z-index: 200;
+      &:hover {
+        .svg1 {
+          path {
+            fill: ${(props) => props.theme.red};
+          }
+        }
+      }
       ${down("md")} {
         margin-right: -50px;
       }
@@ -57,6 +64,7 @@ const GlobalStyles = createGlobalStyle`
         cursor: pointer;
         path {
           fill: ${(props) => props.theme.white};
+        transition: 0.7s ease-in-out 0.3s;
         }
         ${down("xs")} {
           width: 18px;
@@ -83,6 +91,16 @@ const GlobalStyles = createGlobalStyle`
     }
     .home-wrapper {
       height: 100%;
+    }
+    .red-bg {
+      width: 100%;
+      height: 100%;
+      transform: translateY(-100%);
+      position: fixed;
+      left: 0;
+      top: 0;
+      background-color: ${(props) => props.theme.red};
+      z-index: 100;
     }
   }
 `;
@@ -125,8 +143,8 @@ function App() {
             <Pages className="pages">
               <PageNav />
               <CloseMenu />
-              <Route component={Video} path="/video" />
-              <Route component={Photo} path="/photo/:serie" exact />
+              <Route component={Video} path="/videos" />
+              <Route component={Photo} path="/photos/:serie" exact />
               <Route component={About} path="/about" />
               <Route component={EventPages} path="/events/:event" />
             </Pages>

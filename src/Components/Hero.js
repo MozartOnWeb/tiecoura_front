@@ -105,13 +105,9 @@ const Hero = () => {
         settings: {
           infinite: true,
           slidesToScroll: 1,
-          speed: 700,
+          speed: 500,
           slidesToShow: 1,
-          autoplay: true,
-          swipeToSlide: false,
           autoplaySpeed: 15000,
-          fade: true,
-          arrows: false,
         },
       },
       {
@@ -189,7 +185,7 @@ const Hero = () => {
                     y2="35.338"
                     transform="translate(1.656 0)"
                     fill="none"
-                    stroke="#FFFDFF"
+                    stroke="#E2293F"
                     strokeWidth="3"
                   />
                   <line
@@ -198,7 +194,7 @@ const Hero = () => {
                     y2="38.651"
                     transform="translate(38.651 0.552) rotate(90)"
                     fill="none"
-                    stroke="#FFFDFF"
+                    stroke="#E2293F"
                     strokeWidth="3"
                   />
                 </g>
@@ -237,7 +233,7 @@ const Hero = () => {
                     y2="35.338"
                     transform="translate(1.656 0)"
                     fill="none"
-                    stroke="#FFFDFF"
+                    stroke="#E2293F"
                     strokeWidth="3"
                   />
                   <line
@@ -246,7 +242,7 @@ const Hero = () => {
                     y2="38.651"
                     transform="translate(38.651 0.552) rotate(90)"
                     fill="none"
-                    stroke="#FFFDFF"
+                    stroke="#E2293F"
                     strokeWidth="3"
                   />
                 </g>
@@ -254,7 +250,9 @@ const Hero = () => {
             </svg>
             <p className="outline">Tiecoura</p>
             <h1>African</h1>
-            <h1>Studio.</h1>
+            <h1>
+              Studio<span className="dot">.</span>
+            </h1>
           </HeroInfo>
           {/* Hero Informations */}
 
@@ -262,8 +260,10 @@ const Hero = () => {
           <HeroImages>
             <div className="squared1">
               {serieName.slice(0, 1).map((link) => (
-                <Link key={link.name} to={`/photo/${link.name}`}>
-                  <h2>Voir les Photos</h2>
+                <Link key={link.name} to={`/photos/${link.name}`}>
+                  <h2>
+                    Voir les Photos<span className="dot">.</span>
+                  </h2>
                   <img
                     src={firstImg}
                     alt=""
@@ -274,8 +274,10 @@ const Hero = () => {
             </div>
 
             <div className="squared2">
-              <Link to="/video">
-                <h2>Voir les Vidéos</h2>
+              <Link to="/videos">
+                <h2>
+                  Voir les Vidéos<span className="dot">.</span>
+                </h2>
                 {size.width <= "375" ? (
                   <video src={firstVid} loop muted />
                 ) : (
@@ -286,7 +288,9 @@ const Hero = () => {
 
             <div className="rectangle">
               <Link to="/about">
-                <h2>A Propos de moi</h2>
+                <h2>
+                  A Propos de moi<span className="dot">.</span>
+                </h2>
                 <img src={secondImg} alt="" />
               </Link>
             </div>

@@ -52,7 +52,6 @@ export const EventContainer = styled.div`
 export const SingleEvent = styled.div`
   display: flex;
   flex-direction: column;
-  border-top: 1px dashed black;
   background-color: #161616;
 
   border-radius: 15px;
@@ -62,13 +61,17 @@ export const SingleEvent = styled.div`
       margin: 0px 60px;
       font-size: 13px;
       text-transform: uppercase;
-      color: ${(props) => props.theme.white};
+      color: ${(props) => props.theme.red};
       word-spacing: 2.5px;
       font-weight: normal;
       position: relative;
+      transition: 0.5s ease-in-out 0.3s;
       ${down("s")} {
         font-size: 12px;
         margin: 0px 50px;
+      }
+      &:hover {
+        color: ${(props) => props.theme.white};
       }
     }
   }
@@ -77,11 +80,18 @@ export const SingleEvent = styled.div`
 export const ImageContainer = styled.div`
   width: 100%;
   height: 150px;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 15px;
   img {
     border-radius: 15px;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 0.5s ease-in-out 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 `;
 
@@ -89,7 +99,7 @@ export const EventInfos = styled.div`
   padding: 10px;
   h2 {
     font-size: 16px;
-    color: ${(props) => props.theme.white};
+    color: ${(props) => props.theme.red};
     margin: 5px 0;
   }
   p {

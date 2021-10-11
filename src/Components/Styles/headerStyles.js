@@ -23,10 +23,18 @@ export const HeaderContainer = styled(motion.div)`
     align-items: center;
     justify-content: center;
     margin-right: 20px;
+    &:hover {
+      .svg1 {
+        path {
+          fill: ${(props) => props.theme.red};
+        }
+      }
+    }
     .svg1 {
       width: 25px;
       cursor: pointer;
       path {
+        transition: 0.7s ease-in-out 0.3s;
         fill: ${(props) => props.theme.white};
       }
       ${down("xs")} {
