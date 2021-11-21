@@ -61,19 +61,22 @@ export const HeaderContainer = styled(motion.div)`
   }
 `;
 
-export const Logo = styled(motion.h2)`
+export const Logo = styled.div`
   z-index: 99;
   cursor: pointer;
-  font-family: ${(props) => props.theme.mainFont};
-  font-weight: 400;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.white};
+  width: 90px;
+  height: 90px;
+  svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   ${down("md")} {
-    font-size: 20px;
-    margin-left: 30px;
+    width: 50px;
+    height: 50px;
   }
   ${down("sm")} {
-    font-size: 20px;
-    margin-left: 20px;
+    width: 30px;
+    height: 30px;
   }
 `;
