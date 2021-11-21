@@ -1,9 +1,6 @@
 // Import Styled-components
 import styled from "styled-components";
 
-// Import Framer Motion
-import { motion } from "framer-motion";
-
 // Import Styled BraekPoint
 import { down } from "styled-breakpoints";
 
@@ -57,7 +54,7 @@ export const WelcomeImage = styled.div`
   position: absolute;
   right: 0;
   /* Border */
-  border-top: 3px solid #fffdff;
+  border-top: 3px solid #e2293f;
   display: inline-block;
   margin: 0px auto;
   padding: 0px;
@@ -69,20 +66,28 @@ export const WelcomeImage = styled.div`
   }
 `;
 
-export const Logo = styled(motion.h2)`
+export const Logo = styled.div`
   z-index: 99;
   position: absolute;
   left: 5%;
   top: 5%;
+  width: 70px;
+  height: 70px;
   cursor: pointer;
-  font-family: ${(props) => props.theme.mainFont};
-  font-size: 30px;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.white};
+  svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  ${down("md")} {
+    width: 60px;
+    height: 60px;
+  }
   ${down("sm")} {
     font-size: 24px;
     left: 10%;
+    width: 50px;
+    height: 50px;
   }
 `;
 

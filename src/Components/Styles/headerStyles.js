@@ -64,19 +64,19 @@ export const HeaderContainer = styled(motion.div)`
 export const Logo = styled.div`
   z-index: 99;
   cursor: pointer;
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   svg {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
   ${down("md")} {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
   }
   ${down("sm")} {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
   }
 `;
